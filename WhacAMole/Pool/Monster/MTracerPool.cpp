@@ -3,7 +3,6 @@
 MTracerPool::MTracerPool()
 {
 	m_nMax = 30;
-	m_pTracer = nullptr;
 }
 
 MTracerPool::~MTracerPool()
@@ -13,12 +12,6 @@ MTracerPool::~MTracerPool()
 
 void MTracerPool::Release()
 {
-	if (nullptr != m_pTracer)
-	{
-		delete[] m_pTracer;
-		m_pTracer = nullptr;
-	}
-
 	MonsterPool::Release();
 }
 
@@ -29,12 +22,21 @@ bool MTracerPool::vir_Initialize(const monster_info_t& info)
 	memcpy(&m_stInfo, &info, sizeof(monster_info_t));
 	m_nIDs = 1;
 	m_nMax = 30;		//--
-	m_pTracer = new MTracer[m_nMax];
-	if (nullptr == m_pTracer)
-		return false;
+	m_nExpStep = 10;
 
-	for (int i = 0; i < m_nMax; i++)
-		_AddToList(m_pTracer + i);
+	return vir_Expend(m_nExpStep);
+}
+
+bool MTracerPool::vir_Expend(int nCount)
+{
+	for (int i = 0; i < nCount; i++)
+	{
+		MTracer*	pTracer = new MTracer;
+		if (nullptr == pTracer)
+			return false;
+
+		_AddToList(pTracer);
+	}
 
 	return true;
 }

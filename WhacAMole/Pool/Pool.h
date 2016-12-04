@@ -15,7 +15,8 @@ protected:
 
 protected:
 	int				m_nIDs;					// 构造对象ID的递增值
-	int				m_nMax;
+	int				m_nMax;					// 最大容量
+	int				m_nExpStep;				// 扩容步长
 	list<T*>		m_list_free;
 	map<int, T*>	m_map_used;
 
@@ -32,6 +33,7 @@ protected:
 protected:
 	// 具体化实例对象，返回改对象的ID
 	virtual int vir_Create(T* pObj, void* in_pData, int& out_nID) = 0;
+	virtual bool vir_Expend(int nCount) = 0;
 	virtual void vir_Recyle(T* pObj);
 
 	// 默认的创建ID函数，派生类可以根据自己的需要，改写ID的生成规则
@@ -55,6 +57,29 @@ void Pool<T>::Release(void)
 {
 	m_nIDs = 1;
 	m_nMax = 0;
+
+	list<T*>::iterator		it_list;
+	for (it_list = m_list_free.begin(); it_list != m_list_free.end(); ++it_list)
+	{
+		T*	pObj = (*it_list);
+		if (nullptr != pObj)
+		{
+			delete pObj;
+			pObj = nullptr;
+		}
+	}
+
+	map<int, T*>::iterator		it_map;
+	for (it_map = m_map_used.begin(); it_map != m_map_used.end(); ++it_map)
+	{
+		T*	pObj = (*it_map).second;
+		if (nullptr != pObj)
+		{
+			delete pObj;
+			pObj = nullptr;
+		}
+	}
+
 	m_list_free.clear();
 	m_map_used.clear();
 }
@@ -65,7 +90,15 @@ int Pool<T>::Create(void* in_pData, T*& pObj)
 	pObj = nullptr;
 
 	if (m_list_free.empty())
-		return BUILD_ERRORCODE(0, emME_OBJ_USEDOUT);
+	{
+		if (m_map_used.size() >= m_nMax)
+			return BUILD_ERRORCODE(0, emME_OBJ_USEDOUT);
+		
+		int step = (int)(m_nMax - m_map_used.size());
+		step = (m_nExpStep > step) ? step : m_nExpStep;
+		if (!vir_Expend(step))
+			return BUILD_ERRORCODE(0, emME_OBJ_USEDOUT);
+	}
 
 	pObj = m_list_free.front();
 	m_list_free.pop_front();
@@ -87,6 +120,12 @@ int Pool<T>::Create(void* in_pData, T*& pObj)
 }
 
 template<class T>
+bool Pool<T>::vir_Expend(int nCount)
+{
+	return false;
+}
+
+template<class T>
 void Pool<T>::vir_Recyle(T* pObj)
 {
 	return;
@@ -102,11 +141,23 @@ bool Pool<T>::Recycle(int nID)
 	T* pObj = (*it).second;
 
 	vir_Recyle(pObj);
-	m_map_used.erase(it);
-	if (nullptr == pObj)
-		return false;
 
-	m_list_free.push_back(pObj);
+	// 说明有动态缩容
+	if (m_map_used.size() + m_list_free.size() > m_nMax)
+	{
+		if (nullptr != pObj)	// 删除对象
+		{
+			delete pObj;
+			pObj = nullptr;
+		}
+	}
+	else
+	{
+		if (nullptr != pObj)
+			m_list_free.push_back(pObj);
+	}
+
+	m_map_used.erase(it);
 
 	return true;
 }
@@ -120,7 +171,13 @@ bool Pool<T>::IsPoolFull(void)
 template<class T>
 bool Pool<T>::_IsPoolFull(void)
 {
-	return m_list_free.empty();
+	if (!m_list_free.empty())
+		return false;
+
+	if (m_map_used.size() < m_nMax)
+		return false;
+
+	return true;
 }
 
 template<class T>

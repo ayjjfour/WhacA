@@ -35,7 +35,7 @@ typedef struct _monster_info_s {
 // ¹ÖÎï»ùÀà
 class Monster
 {
-protected:
+public:
 	Monster();
 	virtual ~Monster();
 

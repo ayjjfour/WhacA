@@ -17,15 +17,22 @@ bool TFlyingPool::vir_Initialize(const arena_info_t& info)
 	memcpy(&m_stInfo, &info, sizeof(arena_info_t));
 
 	m_nMax = 30; //--
-	m_pTFlyings = new TFlying[m_nMax];
-	if (nullptr == m_pTFlyings)
-		return false;
+	m_nExpStep = 10;
 
-	for (int i = 0; i < m_nMax; i++)
+	return vir_Expend(m_nExpStep);
+}
+
+bool TFlyingPool::vir_Expend(int nCount)
+{
+	for (int i = 0; i < nCount; i++)
 	{
-		m_pTFlyings[i].SetID(i);
-		m_pTFlyings[i].SetType(m_stInfo.m_nType);
-		_AddToList(m_pTFlyings + i);
+		TFlying* pTFlyings = new TFlying;
+		if (nullptr == pTFlyings)
+			return false;
+
+		pTFlyings->SetID(i);
+		pTFlyings->SetType(m_stInfo.m_nType);
+		_AddToList(pTFlyings);
 	}
 
 	return true;
@@ -33,11 +40,5 @@ bool TFlyingPool::vir_Initialize(const arena_info_t& info)
 
 void TFlyingPool::Release()
 {
-	if (nullptr != m_pTFlyings)
-	{
-		delete[] m_pTFlyings;
-		m_pTFlyings = nullptr;
-	}
-
 	ArenaPool::Release();
 }

@@ -13,10 +13,14 @@ public:
 	HolePool();
 	~HolePool();
 
-protected:
-	Hole*		m_pHoles;
-
 public:
 	virtual bool	vir_Initialize(const arena_info_t& info);
 	void			Release();
+
+protected:
+
+
+protected:
+	virtual bool	vir_Expend(int nCount);
+	//virtual int		vir_CreateID(void);
 };

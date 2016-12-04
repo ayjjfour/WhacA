@@ -22,7 +22,7 @@ typedef	struct _arena_info_s {
 
 class Arena
 {
-protected:
+public:
 	Arena();
 	virtual ~Arena();
 

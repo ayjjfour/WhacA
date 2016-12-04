@@ -8,12 +8,12 @@ public:
 	MTracerPool();
 	~MTracerPool();
 
-protected:
-	MTracer*		m_pTracer;
-
 public:
 	void Release();
 
 public:
 	virtual bool vir_Initialize(const monster_info_t& info);
+
+protected:
+	virtual bool vir_Expend(int nCount);
 };

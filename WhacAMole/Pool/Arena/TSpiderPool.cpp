@@ -17,15 +17,22 @@ bool TSpiderPool::vir_Initialize(const arena_info_t& info)
 	memcpy(&m_stInfo, &info, sizeof(arena_info_t));
 
 	m_nMax = 30; //--
-	m_pTSpiders = new TSpider[m_nMax];
-	if (nullptr == m_pTSpiders)
-		return false;
+	m_nExpStep = 10;
+	
+	return vir_Expend(m_nExpStep);
+}
 
-	for (int i = 0; i < m_nMax; i++)
+bool TSpiderPool::vir_Expend(int nCount)
+{
+	for (int i = 0; i < nCount; i++)
 	{
-		m_pTSpiders[i].SetID(i);
-		m_pTSpiders[i].SetType(m_stInfo.m_nType);
-		_AddToList(m_pTSpiders + i);
+		TSpider*	pTSpider = new TSpider;
+		if (nullptr == pTSpider)
+			return false;
+
+		pTSpider->SetID(i);
+		pTSpider->SetType(m_stInfo.m_nType);
+		_AddToList(pTSpider);
 	}
 
 	return true;
@@ -33,11 +40,5 @@ bool TSpiderPool::vir_Initialize(const arena_info_t& info)
 
 void TSpiderPool::Release()
 {
-	if (nullptr != m_pTSpiders)
-	{
-		delete[] m_pTSpiders;
-		m_pTSpiders = nullptr;
-	}
-
 	ArenaPool::Release();
 }

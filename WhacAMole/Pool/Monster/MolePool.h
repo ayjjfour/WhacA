@@ -9,12 +9,12 @@ public:
 	MolePool();
 	~MolePool();
 
-protected:
-	Mole*		m_pMoles;
-
 public:
 	void Release();
 
 public:
 	virtual bool vir_Initialize(const monster_info_t& info);
+
+protected:
+	virtual bool vir_Expend(int nCount);
 };

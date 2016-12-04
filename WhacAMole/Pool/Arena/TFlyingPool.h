@@ -13,10 +13,10 @@ public:
 	TFlyingPool();
 	~TFlyingPool();
 
-protected:
-	TFlying*		m_pTFlyings;
-
 public:
 	virtual bool	vir_Initialize(const arena_info_t& info);
 	void			Release();
+
+protected:
+	virtual bool	vir_Expend(int nCount);
 };

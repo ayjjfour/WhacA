@@ -13,10 +13,10 @@ public:
 	TSpiderPool();
 	~TSpiderPool();
 
-protected:
-	TSpider*		m_pTSpiders;
-
 public:
 	virtual bool	vir_Initialize(const arena_info_t& info);
 	void			Release();
+
+protected:
+	virtual bool	vir_Expend(int nCount);
 };

@@ -17,15 +17,21 @@ bool HolePool::vir_Initialize(const arena_info_t& info)
 	memcpy(&m_stInfo, &info, sizeof(arena_info_t));
 
 	m_nMax = 9; //--
-	m_pHoles = new Hole[m_nMax];
-	if (nullptr == m_pHoles)
-		return false;
 
-	for (int i = 0; i < m_nMax; i++)
+	return vir_Expend(m_nMax);
+}
+
+bool HolePool::vir_Expend(int nCount)
+{
+	for (int i = 0; i < nCount; i++)
 	{
-		m_pHoles[i].SetID(i);
-		m_pHoles[i].SetType(m_stInfo.m_nType);
-		_AddToList(m_pHoles + i);
+		Hole*	pHole = new Hole;
+		if (nullptr == pHole)
+			return false;
+
+		pHole->SetID(i);
+		pHole->SetType(m_stInfo.m_nType);
+		_AddToList(pHole);
 	}
 
 	return true;
@@ -33,11 +39,5 @@ bool HolePool::vir_Initialize(const arena_info_t& info)
 
 void HolePool::Release()
 {
-	if (nullptr != m_pHoles)
-	{
-		delete[] m_pHoles;
-		m_pHoles = nullptr;
-	}
-
 	ArenaPool::Release();
 }
