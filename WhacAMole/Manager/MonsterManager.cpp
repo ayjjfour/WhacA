@@ -1,6 +1,8 @@
 #include "MonsterManager.h"
 #include "../GameConfig/GameConfig.h"
 
+#include <stdio.h>
+
 #include <algorithm>
 #include <random> // std::default_random_engine  
 #include <chrono> // std::chrono::system_clock  
@@ -145,7 +147,7 @@ bool MonsterManager::_FetchMonsterInfo(int nType, monster_info_t& out_info)
 {
 	//-- 从配置中取指定类型的怪物数据
 	out_info.m_nType = nType;
-	snprintf(out_info.m_Name, sizeof(out_info.m_Name) - 1, "怪物%d", nType);
+	_snprintf_s(out_info.m_Name, sizeof(out_info.m_Name) - 1, "怪物%d", nType);
 	out_info.m_nHPMax = 2;
 	out_info.m_nHPCur = out_info.m_nHPMax;
 	out_info.m_nRateMin = 1;

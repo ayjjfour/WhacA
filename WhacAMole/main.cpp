@@ -38,5 +38,7 @@ int main(int argc, char*argv[])
 		printf("\n\n");
 	}
 
+	system("pause");
+
 	return 0;
 }
