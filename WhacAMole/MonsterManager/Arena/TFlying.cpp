@@ -1,5 +1,5 @@
 #include "TFlying.h"
-#include "../Tools/Random.h"
+#include "Tools/Random.h"
 
 TFlying::TFlying()
 {

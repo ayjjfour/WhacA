@@ -1,5 +1,5 @@
 #include "MonsterManager.h"
-#include "../GameConfig/GameConfig.h"
+#include "GameData/GameConfig.h"
 
 #include <stdio.h>
 

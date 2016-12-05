@@ -81,6 +81,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -110,48 +111,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Arena\Arena.h" />
-    <ClInclude Include="Arena\ArenaConfig.h" />
-    <ClInclude Include="Arena\Hole.h" />
-    <ClInclude Include="Arena\TFlying.h" />
-    <ClInclude Include="Arena\Trace.h" />
-    <ClInclude Include="Arena\TSpider.h" />
     <ClInclude Include="Error\MoleError.h" />
-    <ClInclude Include="GameConfig\GameConfig.h" />
-    <ClInclude Include="Manager\CreateInfo.h" />
-    <ClInclude Include="Manager\MonsterManager.h" />
-    <ClInclude Include="Monster\Mole.h" />
-    <ClInclude Include="Monster\Monster.h" />
-    <ClInclude Include="Monster\MTracer.h" />
-    <ClInclude Include="Pool\Arena\ArenaPool.h" />
-    <ClInclude Include="Pool\Arena\HolePool.h" />
-    <ClInclude Include="Pool\Arena\TFlyingPool.h" />
-    <ClInclude Include="Pool\Arena\TSpiderPool.h" />
-    <ClInclude Include="Pool\HeadPool.h" />
-    <ClInclude Include="Pool\Monster\MolePool.h" />
-    <ClInclude Include="Pool\Monster\MonsterPool.h" />
-    <ClInclude Include="Pool\Monster\MTracerPool.h" />
+    <ClInclude Include="GameData\DataManager.h" />
+    <ClInclude Include="GameData\GameConfig.h" />
+    <ClInclude Include="GameData\MonsterData.h" />
+    <ClInclude Include="MonsterManager\Arena\Arena.h" />
+    <ClInclude Include="MonsterManager\Arena\ArenaConfig.h" />
+    <ClInclude Include="MonsterManager\Arena\Hole.h" />
+    <ClInclude Include="MonsterManager\Arena\TFlying.h" />
+    <ClInclude Include="MonsterManager\Arena\Trace.h" />
+    <ClInclude Include="MonsterManager\Arena\TSpider.h" />
+    <ClInclude Include="MonsterManager\CreateInfo.h" />
+    <ClInclude Include="MonsterManager\MonsterManager.h" />
+    <ClInclude Include="MonsterManager\Monster\Mole.h" />
+    <ClInclude Include="MonsterManager\Monster\Monster.h" />
+    <ClInclude Include="MonsterManager\Monster\MTracer.h" />
+    <ClInclude Include="MonsterManager\Pool\Arena\ArenaPool.h" />
+    <ClInclude Include="MonsterManager\Pool\Arena\HolePool.h" />
+    <ClInclude Include="MonsterManager\Pool\Arena\TFlyingPool.h" />
+    <ClInclude Include="MonsterManager\Pool\Arena\TSpiderPool.h" />
+    <ClInclude Include="MonsterManager\Pool\HeadPool.h" />
+    <ClInclude Include="MonsterManager\Pool\Monster\MolePool.h" />
+    <ClInclude Include="MonsterManager\Pool\Monster\MonsterPool.h" />
+    <ClInclude Include="MonsterManager\Pool\Monster\MTracerPool.h" />
     <ClInclude Include="Pool\Pool.h" />
+    <ClInclude Include="TaskManager\PlayerHit\IProtocal.h" />
     <ClInclude Include="Tools\Random.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Arena\Arena.cpp" />
-    <ClCompile Include="Arena\Hole.cpp" />
-    <ClCompile Include="Arena\TFlying.cpp" />
-    <ClCompile Include="Arena\Trace.cpp" />
-    <ClCompile Include="Arena\TSpider.cpp" />
+    <ClCompile Include="GameData\DataManager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Manager\MonsterManager.cpp" />
-    <ClCompile Include="Monster\Mole.cpp" />
-    <ClCompile Include="Monster\Monster.cpp" />
-    <ClCompile Include="Monster\MTracer.cpp" />
-    <ClCompile Include="Pool\Arena\ArenaPool.cpp" />
-    <ClCompile Include="Pool\Arena\HolePool.cpp" />
-    <ClCompile Include="Pool\Arena\TFlyingPool.cpp" />
-    <ClCompile Include="Pool\Arena\TSpiderPool.cpp" />
-    <ClCompile Include="Pool\Monster\MolePool.cpp" />
-    <ClCompile Include="Pool\Monster\MonsterPool.cpp" />
-    <ClCompile Include="Pool\Monster\MTracerPool.cpp" />
+    <ClCompile Include="MonsterManager\Arena\Arena.cpp" />
+    <ClCompile Include="MonsterManager\Arena\Hole.cpp" />
+    <ClCompile Include="MonsterManager\Arena\TFlying.cpp" />
+    <ClCompile Include="MonsterManager\Arena\Trace.cpp" />
+    <ClCompile Include="MonsterManager\Arena\TSpider.cpp" />
+    <ClCompile Include="MonsterManager\MonsterManager.cpp" />
+    <ClCompile Include="MonsterManager\Monster\Mole.cpp" />
+    <ClCompile Include="MonsterManager\Monster\Monster.cpp" />
+    <ClCompile Include="MonsterManager\Monster\MTracer.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Arena\ArenaPool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Arena\HolePool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Arena\TFlyingPool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Arena\TSpiderPool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Monster\MolePool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Monster\MonsterPool.cpp" />
+    <ClCompile Include="MonsterManager\Pool\Monster\MTracerPool.cpp" />
     <ClCompile Include="Tools\Random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

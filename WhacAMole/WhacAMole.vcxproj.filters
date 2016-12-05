@@ -1,157 +1,178 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Monster">
-      <UniqueIdentifier>{a7eae752-673c-456a-8f9f-ea849b7deeb1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pool">
-      <UniqueIdentifier>{7b0cfdb4-5adf-4e4d-9767-9715bdb39380}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Manager">
-      <UniqueIdentifier>{3bd861db-fe74-45a8-8454-a46059108497}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="GameConfig">
-      <UniqueIdentifier>{6c05ed6f-82bc-4acf-805f-4948c7bab931}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pool\Monster">
-      <UniqueIdentifier>{e6c1e2bf-2ff8-4bcc-9ddc-1c29866b2a6d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pool\Arena">
-      <UniqueIdentifier>{eadf1a8f-4a33-482b-a503-2c999ccdd380}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Arena">
-      <UniqueIdentifier>{f8d3c969-ad0f-41de-b5f4-c4dc106e5e40}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Error">
       <UniqueIdentifier>{4df9b1b4-7270-41cc-ace8-aa636e03d473}</UniqueIdentifier>
     </Filter>
     <Filter Include="Tools">
       <UniqueIdentifier>{8353609c-c0dc-4c05-8c53-05daa5820a64}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pool">
+      <UniqueIdentifier>{55662d09-8b2f-485e-a408-678f76057e31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager">
+      <UniqueIdentifier>{3bd861db-fe74-45a8-8454-a46059108497}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager\Arena">
+      <UniqueIdentifier>{f8d3c969-ad0f-41de-b5f4-c4dc106e5e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager\Monster">
+      <UniqueIdentifier>{a7eae752-673c-456a-8f9f-ea849b7deeb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager\Pool">
+      <UniqueIdentifier>{7b0cfdb4-5adf-4e4d-9767-9715bdb39380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager\Pool\Monster">
+      <UniqueIdentifier>{e6c1e2bf-2ff8-4bcc-9ddc-1c29866b2a6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MonsterManager\Pool\Arena">
+      <UniqueIdentifier>{eadf1a8f-4a33-482b-a503-2c999ccdd380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameData">
+      <UniqueIdentifier>{6c05ed6f-82bc-4acf-805f-4948c7bab931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager">
+      <UniqueIdentifier>{ae712251-02b7-45d9-bc49-ace50e18baef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager\PlayerHit">
+      <UniqueIdentifier>{7ac5c6bf-7d81-41f9-bbde-92c5d1eabc1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Manager\MonsterManager.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster\Mole.h">
-      <Filter>Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="GameConfig\GameConfig.h">
-      <Filter>GameConfig</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Arena\HolePool.h">
-      <Filter>Pool\Arena</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Monster\MolePool.h">
-      <Filter>Pool\Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Monster\MonsterPool.h">
-      <Filter>Pool\Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\HeadPool.h">
-      <Filter>Pool</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Pool.h">
-      <Filter>Pool</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster\Monster.h">
-      <Filter>Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena\Trace.h">
-      <Filter>Arena</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena\Hole.h">
-      <Filter>Arena</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager\CreateInfo.h">
-      <Filter>Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster\MTracer.h">
-      <Filter>Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Monster\MTracerPool.h">
-      <Filter>Pool\Monster</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena\Arena.h">
-      <Filter>Arena</Filter>
-    </ClInclude>
-    <ClInclude Include="Pool\Arena\ArenaPool.h">
-      <Filter>Pool\Arena</Filter>
-    </ClInclude>
     <ClInclude Include="Error\MoleError.h">
       <Filter>Error</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena\TSpider.h">
-      <Filter>Arena</Filter>
-    </ClInclude>
-    <ClInclude Include="Arena\ArenaConfig.h">
-      <Filter>Arena</Filter>
     </ClInclude>
     <ClInclude Include="Tools\Random.h">
       <Filter>Tools</Filter>
     </ClInclude>
-    <ClInclude Include="Pool\Arena\TSpiderPool.h">
-      <Filter>Pool\Arena</Filter>
+    <ClInclude Include="Pool\Pool.h">
+      <Filter>Pool</Filter>
     </ClInclude>
-    <ClInclude Include="Pool\Arena\TFlyingPool.h">
-      <Filter>Pool\Arena</Filter>
+    <ClInclude Include="MonsterManager\Arena\Arena.h">
+      <Filter>MonsterManager\Arena</Filter>
     </ClInclude>
-    <ClInclude Include="Arena\TFlying.h">
-      <Filter>Arena</Filter>
+    <ClInclude Include="MonsterManager\Arena\ArenaConfig.h">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Arena\Hole.h">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Arena\TFlying.h">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Arena\Trace.h">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Arena\TSpider.h">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Monster\Mole.h">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Monster\Monster.h">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Monster\MTracer.h">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Arena\ArenaPool.h">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Arena\HolePool.h">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Arena\TFlyingPool.h">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Arena\TSpiderPool.h">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Monster\MolePool.h">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Monster\MonsterPool.h">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\Monster\MTracerPool.h">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\Pool\HeadPool.h">
+      <Filter>MonsterManager\Pool</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\CreateInfo.h">
+      <Filter>MonsterManager</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterManager\MonsterManager.h">
+      <Filter>MonsterManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\IProtocal.h">
+      <Filter>TaskManager\PlayerHit</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData\GameConfig.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData\MonsterData.h">
+      <Filter>GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="GameData\DataManager.h">
+      <Filter>GameData</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Monster\Mole.cpp">
-      <Filter>Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager\MonsterManager.cpp">
-      <Filter>Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Pool\Arena\HolePool.cpp">
-      <Filter>Pool\Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="Pool\Monster\MolePool.cpp">
-      <Filter>Pool\Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Pool\Monster\MonsterPool.cpp">
-      <Filter>Pool\Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster\Monster.cpp">
-      <Filter>Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Arena\Trace.cpp">
-      <Filter>Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="Arena\Hole.cpp">
-      <Filter>Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster\MTracer.cpp">
-      <Filter>Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Pool\Monster\MTracerPool.cpp">
-      <Filter>Pool\Monster</Filter>
-    </ClCompile>
-    <ClCompile Include="Arena\Arena.cpp">
-      <Filter>Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="Pool\Arena\ArenaPool.cpp">
-      <Filter>Pool\Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="Arena\TSpider.cpp">
-      <Filter>Arena</Filter>
-    </ClCompile>
     <ClCompile Include="Tools\Random.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
-    <ClCompile Include="Pool\Arena\TSpiderPool.cpp">
-      <Filter>Pool\Arena</Filter>
+    <ClCompile Include="MonsterManager\Arena\Arena.cpp">
+      <Filter>MonsterManager\Arena</Filter>
     </ClCompile>
-    <ClCompile Include="Pool\Arena\TFlyingPool.cpp">
-      <Filter>Pool\Arena</Filter>
+    <ClCompile Include="MonsterManager\Arena\Hole.cpp">
+      <Filter>MonsterManager\Arena</Filter>
     </ClCompile>
-    <ClCompile Include="Arena\TFlying.cpp">
-      <Filter>Arena</Filter>
+    <ClCompile Include="MonsterManager\Arena\TFlying.cpp">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Arena\Trace.cpp">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Arena\TSpider.cpp">
+      <Filter>MonsterManager\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Monster\Mole.cpp">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Monster\Monster.cpp">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Monster\MTracer.cpp">
+      <Filter>MonsterManager\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Arena\ArenaPool.cpp">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Arena\HolePool.cpp">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Arena\TFlyingPool.cpp">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Arena\TSpiderPool.cpp">
+      <Filter>MonsterManager\Pool\Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Monster\MolePool.cpp">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Monster\MonsterPool.cpp">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\Pool\Monster\MTracerPool.cpp">
+      <Filter>MonsterManager\Pool\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterManager\MonsterManager.cpp">
+      <Filter>MonsterManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameData\DataManager.cpp">
+      <Filter>GameData</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #include "MonsterPool.h"
-#include "../../GameConfig/GameConfig.h"
-#include "../../Manager/CreateInfo.h"
+#include "GameData/GameConfig.h"
+#include "MonsterManager/CreateInfo.h"
 
 MonsterPool::MonsterPool()
 {
