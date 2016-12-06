@@ -54,8 +54,8 @@ void MonsterPool::vir_SetMonsterInfo(monster_info_t& out_info, void* in_pData)
 	create_info_t		*pinfo = (create_info_t *)in_pData;
 
 	out_info.m_nMonsterID = vir_CreateID();
-	out_info.m_bCrazy = pinfo->bIsCrazy;					// ¹ÖÎï¿ñ±©ÊôÐÔ
-	if (out_info.m_bCrazy)
+	out_info.m_nCrazyRate = pinfo->nCrazyRate;		// ¹ÖÎï¿ñ±©ÊôÐÔ
+	if (out_info.m_nCrazyRate > NORMAL_RATE)			
 		out_info.m_nHPMax = 1;
 	out_info.m_nHPCur = out_info.m_nHPMax;
 }

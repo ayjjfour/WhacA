@@ -40,14 +40,29 @@ private:
 private:
 	unsigned int m_seed;	// 随机数的种子
 
+
+//////////////////////////////////////////////////////////////////////////
+// 初始化
+//////////////////////////////////////////////////////////////////////////
 public:
 	bool Initialize(void);
 	void Release(void);
 
+protected:
+	// 内部接口
+	bool _Initialize_MonsterSeq(void);
+	bool _Initialize_ArenaPool(void);
+	bool _initialize_MonsterPool(void);
+
+	bool _initialize_ArenaPool(const arena_info_t& info, ArenaPool* pArenaPool);
+	bool _initialize_MonsterPool(const monster_info_t& info, MonsterPool* pMonsterPool, ArenaPool* pArenaPool);
+	bool _FetchMonsterInfo(int nType, monster_info_t& out_info);
+
+//////////////////////////////////////////////////////////////////////////
+// 生产怪物
+//////////////////////////////////////////////////////////////////////////
+public:
 	void CreateMonster(create_info_t& in_info, list<Monster*>& out_lMonster);
-	void RecycleMonster(int nID);
-	void RecycleMonster(vector<int>& vec_type);
-	void RecycleMonster(list<int>& list_type);
 
 protected:
 	// 进行一次怪物生产（每组怪物各生产一只）
@@ -59,19 +74,24 @@ protected:
 	//	out_lMonster		[out] 生产怪物的输出列表
 	//	seq					[in] 怪物序列（从这组怪物中随机生产一个）
 	void _CreateFromGroup(create_info_t& in_info, list<Monster*>& out_lMonster, vector<int>& seq);
-
-	// 回收怪物
-	void _RecycleMonster(int nID);																				
-
 	int _GetRandomMonsterType(const vector<int>& seq) const;
 	int _CreateFromPool(int nType, create_info_t& in_info, Monster*& out_pMonster);
 
-protected:
-	bool _Initialize_MonsterSeq(void);
-	bool _Initialize_ArenaPool(void);
-	bool _initialize_MonsterPool(void);
+//////////////////////////////////////////////////////////////////////////
+// 回收怪物怪物
+//////////////////////////////////////////////////////////////////////////
+public:
+	void RecycleMonster(int nID);
+	void RecycleMonster(vector<int>& vec_type);
+	void RecycleMonster(list<int>& list_type);
 
-	bool _initialize_ArenaPool(const arena_info_t& info, ArenaPool* pArenaPool);
-	bool _initialize_MonsterPool(const monster_info_t& info, MonsterPool* pMonsterPool, ArenaPool* pArenaPool);
-	bool _FetchMonsterInfo(int nType, monster_info_t& out_info);
+protected:
+	// 回收怪物
+	void _RecycleMonster(int nID);
+
+//////////////////////////////////////////////////////////////////////////
+// 提取怪物怪物
+//////////////////////////////////////////////////////////////////////////
+public:
+	const Monster* FetchMonster(int nID);
 };

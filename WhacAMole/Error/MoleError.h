@@ -12,6 +12,8 @@ enum emMoleError
 	emME_OBJ_USEDOUT,
 	emME_OBJ_NULL,			// 对象为空
 	emME_OBJ_CREATE,		// 创建对象失败
+
+	emME_HIT_TYPE,			// 未知打击类型（目前有三种，正常敲死，技能打死，鼠王暴击）
 };
 
 #define		_MODE_(_v_)		((0xFFFF)&(_v_))

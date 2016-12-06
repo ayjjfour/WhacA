@@ -3,5 +3,5 @@
 // 怪物创建相关信息
 typedef struct _create_info_s {
 	int			nCount;			// 创造怪物数量
-	bool		bIsCrazy;		// 怪物是否狂暴
+	int			nCrazyRate;		// 怪物狂暴倍率（放大1000倍)
 } create_info_t;

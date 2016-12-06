@@ -37,13 +37,13 @@
     <Filter Include="TaskManager\PlayerHit">
       <UniqueIdentifier>{7ac5c6bf-7d81-41f9-bbde-92c5d1eabc1f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools\Random">
+      <UniqueIdentifier>{3d15c1f8-0cc7-42c3-86ea-673168afff25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error\MoleError.h">
       <Filter>Error</Filter>
-    </ClInclude>
-    <ClInclude Include="Tools\Random.h">
-      <Filter>Tools</Filter>
     </ClInclude>
     <ClInclude Include="Pool\Pool.h">
       <Filter>Pool</Filter>
@@ -117,12 +117,15 @@
     <ClInclude Include="GameData\DataManager.h">
       <Filter>GameData</Filter>
     </ClInclude>
+    <ClInclude Include="Tools\Random\MT19937.h">
+      <Filter>Tools\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="Tools\Random\Random.h">
+      <Filter>Tools\Random</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Tools\Random.cpp">
-      <Filter>Tools</Filter>
-    </ClCompile>
     <ClCompile Include="MonsterManager\Arena\Arena.cpp">
       <Filter>MonsterManager\Arena</Filter>
     </ClCompile>
@@ -173,6 +176,12 @@
     </ClCompile>
     <ClCompile Include="GameData\DataManager.cpp">
       <Filter>GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\Random\MT19937.cpp">
+      <Filter>Tools\Random</Filter>
+    </ClCompile>
+    <ClCompile Include="Tools\Random\Random.cpp">
+      <Filter>Tools\Random</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -136,7 +136,8 @@
     <ClInclude Include="MonsterManager\Pool\Monster\MTracerPool.h" />
     <ClInclude Include="Pool\Pool.h" />
     <ClInclude Include="TaskManager\PlayerHit\IProtocal.h" />
-    <ClInclude Include="Tools\Random.h" />
+    <ClInclude Include="Tools\Random\MT19937.h" />
+    <ClInclude Include="Tools\Random\Random.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameData\DataManager.cpp" />
@@ -157,7 +158,8 @@
     <ClCompile Include="MonsterManager\Pool\Monster\MolePool.cpp" />
     <ClCompile Include="MonsterManager\Pool\Monster\MonsterPool.cpp" />
     <ClCompile Include="MonsterManager\Pool\Monster\MTracerPool.cpp" />
-    <ClCompile Include="Tools\Random.cpp" />
+    <ClCompile Include="Tools\Random\MT19937.cpp" />
+    <ClCompile Include="Tools\Random\Random.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
