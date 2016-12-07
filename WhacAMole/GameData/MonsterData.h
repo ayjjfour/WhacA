@@ -40,4 +40,10 @@ typedef struct _monster_info_s {
 	{
 		memset(this, 0, sizeof(_monster_info_s));
 	}
+
+	_monster_info_s& operator=(_monster_info_s& in)
+	{
+		memcpy(this, &in, sizeof(_monster_info_s));
+		return *this;
+	}
 } monster_info_t;

@@ -40,6 +40,18 @@
     <Filter Include="Tools\Random">
       <UniqueIdentifier>{3d15c1f8-0cc7-42c3-86ea-673168afff25}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Protocal">
+      <UniqueIdentifier>{fdc47a05-598c-464a-980c-b8365f44c204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager\PlayerHit\NormalHit">
+      <UniqueIdentifier>{cbdef1b3-a1ee-45ae-9994-f5559457da66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager\PlayerHit\SkillHit">
+      <UniqueIdentifier>{3588ccb9-fc0a-4004-a848-c5be4acb95e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TaskManager\PlayerHit\KingHit">
+      <UniqueIdentifier>{583120b5-a447-4282-92ba-ca8f8ed59c11}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Error\MoleError.h">
@@ -105,9 +117,6 @@
     <ClInclude Include="MonsterManager\MonsterManager.h">
       <Filter>MonsterManager</Filter>
     </ClInclude>
-    <ClInclude Include="TaskManager\PlayerHit\IProtocal.h">
-      <Filter>TaskManager\PlayerHit</Filter>
-    </ClInclude>
     <ClInclude Include="GameData\GameConfig.h">
       <Filter>GameData</Filter>
     </ClInclude>
@@ -122,6 +131,15 @@
     </ClInclude>
     <ClInclude Include="Tools\Random\Random.h">
       <Filter>Tools\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\TaskPlayerHit.h">
+      <Filter>TaskManager\PlayerHit</Filter>
+    </ClInclude>
+    <ClInclude Include="Protocal\GameMessage.pb.h">
+      <Filter>Protocal</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\ITaskInterface.h">
+      <Filter>TaskManager\PlayerHit</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -183,5 +201,16 @@
     <ClCompile Include="Tools\Random\Random.cpp">
       <Filter>Tools\Random</Filter>
     </ClCompile>
+    <ClCompile Include="Protocal\GameMessage.pb.cc">
+      <Filter>Protocal</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\PlayerHit\TaskPlayerHit.cpp">
+      <Filter>TaskManager\PlayerHit</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Protocal\GameMessage.proto">
+      <Filter>Protocal</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -99,7 +99,7 @@ bool Monster::CalculateIncoming(int nWeapon)
 		return false;
 
 	// 计算武器消耗
-	m_stInfo.m_llWeaponCost = _vir_CalculateWeaponCost();
+	m_stInfo.m_llWeaponCost = _vir_CalculateWeaponCost(nWeapon);
 
 	// 计算免伤
 	m_stInfo.m_bMissHit = _vir_CalculateMissHit();
@@ -124,7 +124,7 @@ bool Monster::CalculateIncoming(int nWeapon)
 }
 
 // 计算武器消费
-long long Monster::_vir_CalculateWeaponCost(void)
+long long Monster::_vir_CalculateWeaponCost(int nWeapon)
 {
 	return (long long)(nWeapon * ((float)m_stInfo.m_nCrazyRate / NORMAL_RATE));
 }

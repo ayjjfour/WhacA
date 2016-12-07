@@ -16,9 +16,9 @@ void MonsterData::Release(void)
 	m_map_monster.clear();
 }
 
-int MonsterData::Insert(int nID, const Monster* monster)
+int MonsterData::Insert(int nID, const monster_info_t& monster)
 {
-	pair<map<int, Monster*>::iterator, bool>	ret;
+	pair<map<int, monster_info_t>::iterator, bool>	ret;
 
 	ret = m_map_monster.insert(make_pair(nID, monster));
 
@@ -30,7 +30,7 @@ int MonsterData::Insert(int nID, const Monster* monster)
 
 int MonsterData::GetCount(void) const
 {
-	return m_map_monster.size();
+	return (int)m_map_monster.size();
 }
 
 void MonsterData::Begin(void)
@@ -53,7 +53,7 @@ int MonsterData::GetFirst(void)
 	return (*m_it_monster).first;
 }
 
-const Monster* MonsterData::GetSecond(void)
+const monster_info_t& MonsterData::GetSecond(void)
 {
 	return (*m_it_monster).second;
 }

@@ -23,23 +23,23 @@ public:
 	~MonsterData();
 
 protected:
-	map<int, Monster*>					m_map_monster;
-	map<int, Monster*>::iterator		m_it_monster;
+	map<int, monster_info_t>					m_map_monster;
+	map<int, monster_info_t>::iterator			m_it_monster;
 
 public:
 	void Release(void);
 
 public:
-	int Insert(int nID, const Monster* monster);
+	int Insert(int nID, const monster_info_t& monster);
 	int GetCount(void) const;
 	void Begin(void);
 	bool IsEnd(void);
 	void Next(void);
 	int GetFirst(void);
-	const Monster* GetSecond(void);
+	const monster_info_t& GetSecond(void);
 };
 
-class DataManager
+class DataHit
 {
 public:
 	int					m_nWeaponCost;		// ÎäÆ÷¼Û¸ñ

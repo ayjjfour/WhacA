@@ -15,12 +15,12 @@ int main(int argc, char*argv[])
 	monster_info_t		stinfo;
 
 	info.nCount = 30;
-	info.bIsCrazy = true;
+	info.nCrazyRate = NORMAL_RATE;
 
 	for (int i = 0; i < 2; i++)
 	{
 		info.nCount = 30 - i * 15;
-		info.bIsCrazy = true;
+		info.nCrazyRate = NORMAL_RATE;
 		man.CreateMonster(info, lMonster);
 		man.CreateMonster(info, lMonster);
 		man.CreateMonster(info, lMonster);

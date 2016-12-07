@@ -36,10 +36,10 @@ public:
 
 protected:
 	// 以下方法写成虚函数，如果怪物有特殊算法，继承实现之
-	virtual long long _vir_CalculateWeaponCost(void);		// 计算武器消耗
-	virtual bool _vir_CalculateMissHit(void);				// 计算是否免伤
-	virtual int _vir_CalculateKillRate(void);				// 计算击杀倍率
-	virtual bool _vir_CalculateHasIncoming(void);			// 计算是否有收益
-	virtual long long _vir_CalculateMoney(void);			// 计算金币收益
-	virtual long long _vir_CalculateTicket(void);			// 计算礼票收益
+	virtual long long _vir_CalculateWeaponCost(int nWeapon);	// 计算武器消耗
+	virtual bool _vir_CalculateMissHit(void);					// 计算是否免伤
+	virtual int _vir_CalculateKillRate(void);					// 计算击杀倍率
+	virtual bool _vir_CalculateHasIncoming(void);				// 计算是否有收益
+	virtual long long _vir_CalculateMoney(void);				// 计算金币收益
+	virtual long long _vir_CalculateTicket(void);				// 计算礼票收益
 };
