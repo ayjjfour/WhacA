@@ -81,7 +81,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;E:\code\src\c++\google\protobuf\src</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,6 +137,9 @@
     <ClInclude Include="Pool\Pool.h" />
     <ClInclude Include="Protocal\GameMessage.pb.h" />
     <ClInclude Include="TaskManager\PlayerHit\ITaskInterface.h" />
+    <ClInclude Include="TaskManager\PlayerHit\KingHit\KingHit.h" />
+    <ClInclude Include="TaskManager\PlayerHit\NormalHit\NormalHit.h" />
+    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SKillHit.h" />
     <ClInclude Include="TaskManager\PlayerHit\TaskPlayerHit.h" />
     <ClInclude Include="Tools\Random\MT19937.h" />
     <ClInclude Include="Tools\Random\Random.h" />
@@ -161,6 +164,9 @@
     <ClCompile Include="MonsterManager\Pool\Monster\MonsterPool.cpp" />
     <ClCompile Include="MonsterManager\Pool\Monster\MTracerPool.cpp" />
     <ClCompile Include="Protocal\GameMessage.pb.cc" />
+    <ClCompile Include="TaskManager\PlayerHit\KingHit\KingHit.cpp" />
+    <ClCompile Include="TaskManager\PlayerHit\NormalHit\NormalHit.cpp" />
+    <ClCompile Include="TaskManager\PlayerHit\SkillHit\SkillHit.cpp" />
     <ClCompile Include="TaskManager\PlayerHit\TaskPlayerHit.cpp" />
     <ClCompile Include="Tools\Random\MT19937.cpp" />
     <ClCompile Include="Tools\Random\Random.cpp" />

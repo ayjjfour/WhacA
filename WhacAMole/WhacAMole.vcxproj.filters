@@ -141,6 +141,15 @@
     <ClInclude Include="TaskManager\PlayerHit\ITaskInterface.h">
       <Filter>TaskManager\PlayerHit</Filter>
     </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\NormalHit\NormalHit.h">
+      <Filter>TaskManager\PlayerHit\NormalHit</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\KingHit\KingHit.h">
+      <Filter>TaskManager\PlayerHit\KingHit</Filter>
+    </ClInclude>
+    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SKillHit.h">
+      <Filter>TaskManager\PlayerHit\SkillHit</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -206,6 +215,15 @@
     </ClCompile>
     <ClCompile Include="TaskManager\PlayerHit\TaskPlayerHit.cpp">
       <Filter>TaskManager\PlayerHit</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\PlayerHit\NormalHit\NormalHit.cpp">
+      <Filter>TaskManager\PlayerHit\NormalHit</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\PlayerHit\KingHit\KingHit.cpp">
+      <Filter>TaskManager\PlayerHit\KingHit</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManager\PlayerHit\SkillHit\SkillHit.cpp">
+      <Filter>TaskManager\PlayerHit\SkillHit</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

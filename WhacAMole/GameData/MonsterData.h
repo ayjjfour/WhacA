@@ -13,7 +13,7 @@ enum emLiveStatus {
 // 怪物信息结构
 typedef struct _monster_info_s {
 	// 怪物出生时设置的属性
-	int					m_nMonsterID;				// 怪物ID
+	int					m_nID;						// 怪物ID
 	emLiveStatus		m_emLiveStatus;				// 怪物生存标志（取值范围见枚举emLiveStatus）
 	time_t				m_nBronTime;				// 怪物出生时间
 	int					m_nCrazyRate;				// 狂暴倍率（放大1000倍）

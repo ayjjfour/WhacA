@@ -42,7 +42,10 @@ public:
 class DataHit
 {
 public:
-	int					m_nWeaponCost;		// 武器价格
+	int					m_nChairID;			// 玩家座位号
+	int					m_nWeaponId;		// 武器价格
+	long long			m_nWeaponCost;		// 武器价格
+
 	MonsterData			m_obj_normal;		// 正常击杀的怪物
 	MonsterData			m_obj_skill;		// 技能击杀的怪物
 	MonsterData			m_obj_king;			// 鼠王暴击的怪物

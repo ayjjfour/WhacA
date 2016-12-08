@@ -1,23 +1,30 @@
 #pragma once
 
 #include "ITaskInterface.h"
+#include "./NormalHit/NormalHit.h"
+#include "./SkillHit/SKillHit.h"
+#include "./KingHit/KingHit.h"
 
 class TaskPlayerHit
 {
 public:
+	TaskPlayerHit(MonsterManager& MM);
+	~TaskPlayerHit();
+
+public:
+	int Initialize(void);
 	int TaskBegin(/*IGamePlayer *player*/, void* data, int nSize);
 
 protected:
-	vector<IProtocal*>		m_IProtocal;		// 处理协议数据接口数组
-	vector<ICalculate*>		m_ICalculate;		// 计算收益接口数组
-	vector<IStatistic*>		m_IStatistic;		// 统计接口数组
-	vector<IReward*>		m_IReward;			// 给客户端反馈接口
+	vector<ITask*>			m_ITask;			// 处理协议数据接口数组
+
+	NormalHit				m_TaskNormal;
+	SkillHit				m_TaskSkill;
+	KingHit					m_TaskKing;
+
+protected:
+	MonsterManager&			m_MonsterManager;
 
 protected:
 	int _PraseProtocal(pro_hit_t& ph, void* data, int nSize);
-	int _IProtocal(pro_hit_t& ph, DataHit& dh);
-	int _ICalculate(pro_hit_t& ph, DataHit& dh);
-	int _IStatistic(pro_hit_t& ph, DataHit& dh);
-	int _IReward(pro_hit_t& ph, DataHit& dh);
-
 };

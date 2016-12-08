@@ -14,9 +14,12 @@ enum emMoleError
 	emME_OBJ_CREATE,		// 创建对象失败
 
 	emME_HIT_TYPE,			// 未知打击类型（目前有三种，正常敲死，技能打死，鼠王暴击）
+	emME_HIT_CHAIRID,		// 玩家座位ID
+	emME_HIT_WEAPONID,		// 未知武器ID
 
 	emME_PROTOCAL_NULL,		// 协议数据为空
 	emME_PROTOCAL_PRASE,	// 解析协议失败
+
 };
 
 #define		_MODE_(_v_)		((0xFFFF)&(_v_))
