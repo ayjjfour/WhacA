@@ -3,7 +3,8 @@
 #include "./NormalHit/NormalHit.h"
 #include "MonsterManager/MonsterManager.h"
 
-TaskPlayerHit::TaskPlayerHit(MonsterManager& MM):m_MonsterManager(MM)
+TaskPlayerHit::TaskPlayerHit(MonsterManager& MM):
+	m_MonsterManager(MM), m_TaskNormal(MM),	m_TaskSkill(MM), m_TaskKing(MM)
 {
 }
 
@@ -14,43 +15,50 @@ TaskPlayerHit::~TaskPlayerHit()
 
 int TaskPlayerHit::Initialize(void)
 {
-	m_ITask.insert(&m_TaskNormal);	// 正常打击任务
-	m_ITask.insert(&m_TaskSkill);	// 技能打击任务
-	m_ITask.insert(&m_TaskKing);	// 鼠王暴击任务
+	m_mapITask.insert(make_pair(emTask_Normal, &m_TaskNormal));	// 正常打击任务
+	m_mapITask.insert(make_pair(emTask_Skill, &m_TaskSkill));	// 技能打击任务
+	m_mapITask.insert(make_pair(emTask_King, &m_TaskKing));		// 鼠王暴击任务
+
+	return emME_OK;
 }
 
-int TaskPlayerHit::TaskBegin(/*IGamePlayer *player*/, void* data, int nSize)
+int TaskPlayerHit::TaskBegin(/*IGamePlayer *player,*/ void* data, int nSize)
 {
 	int								res;
 	pro_hit_t						ph;
 	DataHit							dh;
-	vector<ITask*>::iterator		it;
+	map<int, ITask*>::iterator		it;
 
 	res = _PraseProtocal(ph, data, nSize, dh);
-	if (emME_OK != res) break;
+	if (emME_OK != res) 
+		return res;
 
-	for (it = m_ITask.begin(); it != m_ITask.end(); ++it)
+	it = m_mapITask.find(ph.Hit.hittype());
+	if (m_mapITask.end() == it)
+		return 0;
+
+	do 
 	{
-		ITask*		Ip = (*it);
+		ITask*		Ip = (*it).second;
 		if (nullptr == Ip)
-			continue;
+			break;
 
 		res = Ip->Protocal(ph, dh);
 		if (emME_OK != res)
-			continue;
+			break;
 
 		res = Ip->Calculate(ph, dh);
 		if (emME_OK != res)
-			continue;
+			break;
 
 		res = Ip->Statistic(ph, dh);
 		if (emME_OK != res)
-			continue;
+			break;
 
 		res = Ip->Reward(ph, dh);
 		if (emME_OK != res)
-			continue;
-	}
+			break;
+	} while (0);
 
 	return res;
 }
@@ -60,7 +68,7 @@ int TaskPlayerHit::_PraseProtocal(pro_hit_t& ph, void* data, int nSize, DataHit&
 	if (nullptr == data && nSize <= 0)
 		return BUILD_ERRORCODE(0, emME_PROTOCAL_NULL);
 
-	if (!ph.PlayerHit.ParseFromArray(data, nSize))
+	if (!ph.Hit.ParseFromArray(data, nSize))
 		return BUILD_ERRORCODE(0, emME_PROTOCAL_PRASE);
 
 	if (!ph.Hit.has_chairid())

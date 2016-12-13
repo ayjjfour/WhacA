@@ -147,7 +147,7 @@
     <ClInclude Include="TaskManager\PlayerHit\KingHit\KingHit.h">
       <Filter>TaskManager\PlayerHit\KingHit</Filter>
     </ClInclude>
-    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SKillHit.h">
+    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SkillHit.h">
       <Filter>TaskManager\PlayerHit\SkillHit</Filter>
     </ClInclude>
   </ItemGroup>

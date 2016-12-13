@@ -139,7 +139,7 @@
     <ClInclude Include="TaskManager\PlayerHit\ITaskInterface.h" />
     <ClInclude Include="TaskManager\PlayerHit\KingHit\KingHit.h" />
     <ClInclude Include="TaskManager\PlayerHit\NormalHit\NormalHit.h" />
-    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SKillHit.h" />
+    <ClInclude Include="TaskManager\PlayerHit\SkillHit\SkillHit.h" />
     <ClInclude Include="TaskManager\PlayerHit\TaskPlayerHit.h" />
     <ClInclude Include="Tools\Random\MT19937.h" />
     <ClInclude Include="Tools\Random\Random.h" />

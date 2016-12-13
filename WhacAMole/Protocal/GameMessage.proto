@@ -176,6 +176,7 @@ message SkillHit
     repeated int32 MonsterID =2;           //技能打中的目标
 }
 
+
 //点击怪物时
 message PlayerHit   //17
 {
@@ -187,6 +188,44 @@ message PlayerHit   //17
 	optional bool   HasPayWeaponCost = 6;   //用于刷怪速度过快，导致服务端怪已经消失，但客户端未消失，并且Hp大于1，进行了多次击打，导致服务端多次反还消费
 	repeated int32 MonsterIDList = 7;		//怪物ID列表（用于鼠王暴击事件）
 	repeated int32  SkillHitListHasPay = 8;  //技能击中列表中已经扣费id集合
+}
+
+// 一般打击
+message NormalEx
+{
+	required int32	MonsterID	= 1;		// 怪物ID
+	optional bool	HasPay		= 2;		// 是否支付武器费用（服务器用于判断客户端是否扣费）
+}
+
+// 技能打击
+message SkillList
+{
+	required int32			skillID = 1;
+	repeated NormalEx		monster_list = 2;
+}
+
+message SkillEx
+{
+	repeated SkillList		skill_list = 1;
+}
+
+// 鼠王暴击
+message KingEx
+{
+	required NormalEx		king = 1;				// 被击毙的鼠王
+	repeated NormalEx		monster_list = 2;		// 被暴击的怪物列表
+}
+
+// 用户打击
+message PlayerHitEx
+{
+	required int32			HitType = 1;		// 打击类型（1：一般打击，2：技能打击，3：鼠王暴击）
+	optional int32			ChairID = 2;		// 玩家座位号
+	optional int32			WeaponID = 3;		// 武器ID
+	optional bool			IsRobot	= 4;		// 是否机器人
+	optional NormalEx		NormalHit = 5;		// 一般打击
+	optional SkillEx		SkillHit = 6;		// 技能打击
+	optional KingEx			KingHit = 7;		// 鼠王暴击
 }
 
 //客户端收到攻击的反馈

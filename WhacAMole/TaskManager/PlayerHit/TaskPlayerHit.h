@@ -1,9 +1,17 @@
 #pragma once
 
-#include "ITaskInterface.h"
 #include "./NormalHit/NormalHit.h"
-#include "./SkillHit/SKillHit.h"
+#include "./SkillHit/SkillHit.h"
 #include "./KingHit/KingHit.h"
+
+enum emTaskType
+{
+	emTask_None		= 0,
+	emTask_Normal	= 1,
+	emTask_Skill,
+	emTask_King,
+	emTask_All,
+};
 
 class TaskPlayerHit
 {
@@ -13,10 +21,10 @@ public:
 
 public:
 	int Initialize(void);
-	int TaskBegin(/*IGamePlayer *player*/, void* data, int nSize);
+	int TaskBegin(/*IGamePlayer *player,*/ void* data, int nSize);
 
 protected:
-	vector<ITask*>			m_ITask;			// 处理协议数据接口数组
+	map<int, ITask*>		m_mapITask;			// 处理协议数据接口数组
 
 	NormalHit				m_TaskNormal;
 	SkillHit				m_TaskSkill;
@@ -26,5 +34,5 @@ protected:
 	MonsterManager&			m_MonsterManager;
 
 protected:
-	int _PraseProtocal(pro_hit_t& ph, void* data, int nSize);
+	int _PraseProtocal(pro_hit_t& ph, void* data, int nSize, DataHit& dh);
 };
