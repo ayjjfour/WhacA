@@ -23,6 +23,7 @@ protected:
 public:
 	void Release(void);
 	int Create(void* in_pData, T*& pObj);
+	T* Fetch(int nKey);
 	bool Recycle(int nID);
 	bool IsPoolFull(void);
 
@@ -129,6 +130,17 @@ template<class T>
 void Pool<T>::vir_Recyle(T* pObj)
 {
 	return;
+}
+
+template<class T>
+T* Pool<T>::Fetch(int nKey)
+{
+	map<int, T*>::iterator		it_map;
+	it_map = m_map_used.find(nKey);
+	if (m_map_used.end() == it_map)
+		return nullptr;
+
+	return (*it_map).second;
 }
 
 template<class T>

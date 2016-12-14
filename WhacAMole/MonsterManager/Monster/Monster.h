@@ -21,7 +21,7 @@ public:
 
 public:
 	bool		IsDeath(void) const;
-	int			BeHit(void);
+	int			BeHit(emKillType emType);
 	void		Destory(void);
 	void		Reset(void);
 	void		SetID(int nID);
@@ -32,11 +32,11 @@ public:
 	Arena*		RemoveArena(void);
 
 public:
-	bool		CalculateIncoming(int nWeapon);
+	bool		CalculateIncoming(long long nWeapon);
 
 protected:
 	// 以下方法写成虚函数，如果怪物有特殊算法，继承实现之
-	virtual long long _vir_CalculateWeaponCost(int nWeapon);	// 计算武器消耗
+	virtual long long _vir_CalculateWeaponCost(long long nWeapon);	// 计算武器消耗
 	virtual bool _vir_CalculateMissHit(void);					// 计算是否免伤
 	virtual int _vir_CalculateKillRate(void);					// 计算击杀倍率
 	virtual bool _vir_CalculateHasIncoming(void);				// 计算是否有收益

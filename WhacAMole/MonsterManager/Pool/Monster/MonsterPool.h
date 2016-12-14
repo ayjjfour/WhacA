@@ -28,10 +28,14 @@ public:
 
 public:
 	virtual bool vir_Initialize(const monster_info_t& info) = 0;
-	virtual int vir_Create(Monster* pMonster, void* in_pData, int& out_nID);
-	virtual void vir_SetMonsterInfo(monster_info_t& out_info, void* in_pData);
 
 protected:
+	// 创建怪物
+	virtual int vir_Create(Monster* pMonster, void* in_pData, int& out_nID);
+	// 创建怪物时，设置怪物信息
+	virtual void vir_SetMonsterInfo(monster_info_t& out_info, void* in_pData);
+	// 生成怪物ID
 	virtual int vir_CreateID(void);
+	// 回收怪物
 	virtual void vir_Recyle(Monster* pMonster);
 };

@@ -83,6 +83,9 @@
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>./;E:\code\src\c++\google\protobuf\src</AdditionalIncludeDirectories>
     </ClCompile>
+    <PreBuildEvent>
+      <Command>./Protocal/Compile.cmd</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

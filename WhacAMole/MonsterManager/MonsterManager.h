@@ -93,5 +93,8 @@ protected:
 // 提取怪物怪物
 //////////////////////////////////////////////////////////////////////////
 public:
-	const Monster* FetchMonster(int nID);
+	Monster* FetchMonster(int nID);
+
+protected:
+	Monster* _FetchMonster(int nType, int nID);
 };

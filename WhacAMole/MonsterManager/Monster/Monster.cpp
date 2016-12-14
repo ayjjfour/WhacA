@@ -1,3 +1,4 @@
+#include "Error/MoleError.h"
 #include "Monster.h"
 #include "string.h"
 #include "Tools/Random/Random.h"
@@ -33,7 +34,7 @@ bool Monster::IsDeath() const
 	return (m_stInfo.m_emLiveStatus != emLS_Born || 0 >= m_stInfo.m_nHPCur);
 }
 
-int	Monster::BeHit()
+int	Monster::BeHit(emKillType emType)
 {
 	// 判断是否已经死了
 	if (0 >= m_stInfo.m_nHPCur || m_stInfo.m_emLiveStatus != emLS_Born)
@@ -41,9 +42,12 @@ int	Monster::BeHit()
 
 	m_stInfo.m_nHPCur--;
 	if (0 >= m_stInfo.m_nHPCur)
+	{
 		m_stInfo.m_emLiveStatus = emLS_Death;
+		m_stInfo.m_emKillType = emType;
+	}
 
-	return 0;
+	return emME_OK;
 }
 
 void Monster::Destory()
@@ -60,12 +64,12 @@ void Monster::Reset()
 
 void Monster::SetID(int nID)
 {
-	m_stInfo.m_nMonsterID = nID;
+	m_stInfo.m_nID = nID;
 }
 
 int	Monster::GetID(void) const
 {
-	return m_stInfo.m_nMonsterID;
+	return m_stInfo.m_nID;
 }
 
 void Monster::GetInfo(monster_info_t& info) const
@@ -92,7 +96,7 @@ Arena* Monster::RemoveArena(void)
 }
 
 // 计算收益
-bool Monster::CalculateIncoming(int nWeapon)
+bool Monster::CalculateIncoming(long long nWeapon)
 {
 	// 判断是否死亡
 	if (!IsDeath())
@@ -124,9 +128,9 @@ bool Monster::CalculateIncoming(int nWeapon)
 }
 
 // 计算武器消费
-long long Monster::_vir_CalculateWeaponCost(int nWeapon)
+long long Monster::_vir_CalculateWeaponCost(long long llWeapon)
 {
-	return (long long)(nWeapon * ((float)m_stInfo.m_nCrazyRate / NORMAL_RATE));
+	return (long long)(llWeapon * ((float)m_stInfo.m_nCrazyRate / NORMAL_RATE));
 }
 
 // 计算是否免伤

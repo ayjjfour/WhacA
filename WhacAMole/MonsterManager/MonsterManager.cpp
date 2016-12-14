@@ -319,3 +319,46 @@ int MonsterManager::_CreateFromPool(int nType, create_info_t& in_info, Monster*&
 
 	return res;
 }
+
+//////////////////////////////////////////////////////////////////////////
+// 提取怪物怪物
+//////////////////////////////////////////////////////////////////////////
+Monster* MonsterManager::FetchMonster(int nID)
+{
+	map<int, int>::iterator		it;
+	it = m_mapType.find(nID);
+	if (m_mapType.end() == it)
+		return nullptr;
+
+	int nType = (*it).second;
+
+	return _FetchMonster(nType, nID);
+}
+
+Monster* MonsterManager::_FetchMonster(int nType, int nID)
+{
+	Monster*		monster = nullptr;
+	switch (nType)
+	{
+	case mtMolePersia:
+		monster = m_MolePersizPool.Fetch(nID); break;
+	case mtMoleAdorable:
+		monster = m_MoleAdorablePool.Fetch(nID); break;
+	case mtMoleFlying:
+		monster = m_MoleFlyingPool.Fetch(nID); break;
+	case mtMoleNurse:
+		monster = m_MoleNursePool.Fetch(nID); break;
+	case mtMoleMiner:
+		monster = m_MoleMinerPool.Fetch(nID); break;
+	case mtMoleKing:
+		monster = m_MoleKingPool.Fetch(nID); break;
+	case mtSpider:
+		monster = m_SpiderPool.Fetch(nID); break;
+	case mtFly:
+		monster = m_FlyingPool.Fetch(nID); break;
+	default:
+		break;
+	}
+
+	return monster;
+}

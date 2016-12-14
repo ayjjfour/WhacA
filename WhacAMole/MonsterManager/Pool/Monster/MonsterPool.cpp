@@ -45,15 +45,16 @@ int MonsterPool::vir_Create(Monster* pMonster, void* in_pData, int& out_nID)
 	pArena->SetMonster(pMonster);
 
 	// 返回怪物ID
-	out_nID = info.m_nMonsterID;
+	out_nID = info.m_nID;
 	return emME_OK;
 }
 
+// 创建怪物时，设置怪物信息
 void MonsterPool::vir_SetMonsterInfo(monster_info_t& out_info, void* in_pData)
 {
 	create_info_t		*pinfo = (create_info_t *)in_pData;
 
-	out_info.m_nMonsterID = vir_CreateID();
+	out_info.m_nID = vir_CreateID();
 	out_info.m_nCrazyRate = pinfo->nCrazyRate;		// 怪物狂暴属性
 	if (out_info.m_nCrazyRate > NORMAL_RATE)			
 		out_info.m_nHPMax = 1;
