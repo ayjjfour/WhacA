@@ -42,11 +42,27 @@ public:
 class DataHit
 {
 public:
-	int					m_nChairID;			// 玩家座位号
-	int					m_nWeaponId;		// 武器价格
-	long long			m_nWeaponCost;		// 武器价格
+	DataHit() {
+		m_nChairID = -1;
+		m_nWeaponId = -1;
+		m_llWeaponCost = 0;
+		m_bIsCriticalHit = false;
+		m_llMoney = 0;
+		m_llTicket = 0;
+		m_llCost = 0;
+		m_MD.Release();
+	}
+	virtual ~DataHit() {}
 
-	MonsterData			m_obj_normal;		// 正常击杀的怪物
-	MonsterData			m_obj_skill;		// 技能击杀的怪物
-	MonsterData			m_obj_king;			// 鼠王暴击的怪物
+public:
+	int					m_nChairID;			// 玩家座位号
+	int					m_nWeaponId;		// 武器ID
+	long long			m_llWeaponCost;		// 武器价格
+	bool				m_bIsCriticalHit;	// 鼠王是否暴击
+
+	long long			m_llMoney;			// 本次击杀总收益
+	long long			m_llTicket;			// 本次击杀总礼票数
+	long long			m_llCost;			// 本次击杀总花费
+
+	MonsterData			m_MD;				// 击杀怪物结算数据
 };

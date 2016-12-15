@@ -62,6 +62,8 @@ class SkillHitDefaultTypeInternal : public ::google::protobuf::internal::Explici
 SkillHitDefaultTypeInternal _SkillHit_default_instance_;
 class PlayerHitDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PlayerHit> {};
 PlayerHitDefaultTypeInternal _PlayerHit_default_instance_;
+class MonsterExDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MonsterEx> {};
+MonsterExDefaultTypeInternal _MonsterEx_default_instance_;
 class NormalExDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<NormalEx> {};
 NormalExDefaultTypeInternal _NormalEx_default_instance_;
 class SkillListDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SkillList> {};
@@ -107,7 +109,7 @@ ArenaInfoDefaultTypeInternal _ArenaInfo_default_instance_;
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[43];
+::google::protobuf::Metadata file_level_metadata[44];
 const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 
 }  // namespace
@@ -342,14 +344,20 @@ const ::google::protobuf::uint32* protobuf_Offsets_GameMessage_2eproto() {
     4,
     6,
     7,
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MonsterEx, _has_bits_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MonsterEx, _internal_metadata_),
+    ~0u,  // no _extensions_
+    ~0u,  // no _oneof_case_
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MonsterEx, monsterid_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MonsterEx, haspay_),
+    0,
+    1,
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NormalEx, _has_bits_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NormalEx, _internal_metadata_),
     ~0u,  // no _extensions_
     ~0u,  // no _oneof_case_
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NormalEx, monsterid_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NormalEx, haspay_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(NormalEx, monster_),
     0,
-    1,
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SkillList, _has_bits_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SkillList, _internal_metadata_),
     ~0u,  // no _extensions_
@@ -611,27 +619,28 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] = {
   { 190, 196, sizeof(ChangeSkillStatus)},
   { 198, 204, sizeof(SkillHit)},
   { 206, 218, sizeof(PlayerHit)},
-  { 226, 232, sizeof(NormalEx)},
-  { 234, 240, sizeof(SkillList)},
-  { 242, 247, sizeof(SkillEx)},
-  { 248, 254, sizeof(KingEx)},
-  { 256, 267, sizeof(PlayerHitEx)},
-  { 274, 284, sizeof(PlayerHitSync)},
-  { 290, 299, sizeof(MonsterIncoming)},
-  { 304, 310, sizeof(PlayerHitIncoming)},
-  { 312, 318, sizeof(Point)},
-  { 320, 336, sizeof(MonsterTrace)},
-  { 348, 354, sizeof(MonsterTraces)},
-  { 356, 361, sizeof(ChangeScene)},
-  { 362, 367, sizeof(AllMonsterId)},
-  { 368, 376, sizeof(WildSkillStatus)},
-  { 380, 385, sizeof(WildSkillWeaponCostModify)},
-  { 386, 396, sizeof(BroadcastS2C)},
-  { 402, 410, sizeof(ReturnUserMoney)},
-  { 414, 423, sizeof(HallGsAdditionalGameData1Rsp)},
-  { 428, 436, sizeof(AdditionalGameDataRsp)},
-  { 440, 447, sizeof(RefreshUserFishExp)},
-  { 450, 461, sizeof(ArenaInfo)},
+  { 226, 232, sizeof(MonsterEx)},
+  { 234, 239, sizeof(NormalEx)},
+  { 240, 246, sizeof(SkillList)},
+  { 248, 253, sizeof(SkillEx)},
+  { 254, 260, sizeof(KingEx)},
+  { 262, 273, sizeof(PlayerHitEx)},
+  { 280, 290, sizeof(PlayerHitSync)},
+  { 296, 305, sizeof(MonsterIncoming)},
+  { 310, 316, sizeof(PlayerHitIncoming)},
+  { 318, 324, sizeof(Point)},
+  { 326, 342, sizeof(MonsterTrace)},
+  { 354, 360, sizeof(MonsterTraces)},
+  { 362, 367, sizeof(ChangeScene)},
+  { 368, 373, sizeof(AllMonsterId)},
+  { 374, 382, sizeof(WildSkillStatus)},
+  { 386, 391, sizeof(WildSkillWeaponCostModify)},
+  { 392, 402, sizeof(BroadcastS2C)},
+  { 408, 416, sizeof(ReturnUserMoney)},
+  { 420, 429, sizeof(HallGsAdditionalGameData1Rsp)},
+  { 434, 442, sizeof(AdditionalGameDataRsp)},
+  { 446, 453, sizeof(RefreshUserFishExp)},
+  { 456, 467, sizeof(ArenaInfo)},
 };
 
 static const ::google::protobuf::internal::DefaultInstanceData file_default_instances[] = {
@@ -657,6 +666,7 @@ static const ::google::protobuf::internal::DefaultInstanceData file_default_inst
   {reinterpret_cast<const ::google::protobuf::Message*>(&_ChangeSkillStatus_default_instance_), NULL},
   {reinterpret_cast<const ::google::protobuf::Message*>(&_SkillHit_default_instance_), NULL},
   {reinterpret_cast<const ::google::protobuf::Message*>(&_PlayerHit_default_instance_), NULL},
+  {reinterpret_cast<const ::google::protobuf::Message*>(&_MonsterEx_default_instance_), NULL},
   {reinterpret_cast<const ::google::protobuf::Message*>(&_NormalEx_default_instance_), NULL},
   {reinterpret_cast<const ::google::protobuf::Message*>(&_SkillList_default_instance_), NULL},
   {reinterpret_cast<const ::google::protobuf::Message*>(&_SkillEx_default_instance_), NULL},
@@ -698,7 +708,7 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 43);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 44);
 }
 
 }  // namespace
@@ -748,48 +758,50 @@ void protobuf_ShutdownFile_GameMessage_2eproto() {
   delete file_level_metadata[20].reflection;
   _PlayerHit_default_instance_.Shutdown();
   delete file_level_metadata[21].reflection;
-  _NormalEx_default_instance_.Shutdown();
+  _MonsterEx_default_instance_.Shutdown();
   delete file_level_metadata[22].reflection;
-  _SkillList_default_instance_.Shutdown();
+  _NormalEx_default_instance_.Shutdown();
   delete file_level_metadata[23].reflection;
-  _SkillEx_default_instance_.Shutdown();
+  _SkillList_default_instance_.Shutdown();
   delete file_level_metadata[24].reflection;
-  _KingEx_default_instance_.Shutdown();
+  _SkillEx_default_instance_.Shutdown();
   delete file_level_metadata[25].reflection;
-  _PlayerHitEx_default_instance_.Shutdown();
+  _KingEx_default_instance_.Shutdown();
   delete file_level_metadata[26].reflection;
-  _PlayerHitSync_default_instance_.Shutdown();
+  _PlayerHitEx_default_instance_.Shutdown();
   delete file_level_metadata[27].reflection;
-  _MonsterIncoming_default_instance_.Shutdown();
+  _PlayerHitSync_default_instance_.Shutdown();
   delete file_level_metadata[28].reflection;
-  _PlayerHitIncoming_default_instance_.Shutdown();
+  _MonsterIncoming_default_instance_.Shutdown();
   delete file_level_metadata[29].reflection;
-  _Point_default_instance_.Shutdown();
+  _PlayerHitIncoming_default_instance_.Shutdown();
   delete file_level_metadata[30].reflection;
-  _MonsterTrace_default_instance_.Shutdown();
+  _Point_default_instance_.Shutdown();
   delete file_level_metadata[31].reflection;
-  _MonsterTraces_default_instance_.Shutdown();
+  _MonsterTrace_default_instance_.Shutdown();
   delete file_level_metadata[32].reflection;
-  _ChangeScene_default_instance_.Shutdown();
+  _MonsterTraces_default_instance_.Shutdown();
   delete file_level_metadata[33].reflection;
-  _AllMonsterId_default_instance_.Shutdown();
+  _ChangeScene_default_instance_.Shutdown();
   delete file_level_metadata[34].reflection;
-  _WildSkillStatus_default_instance_.Shutdown();
+  _AllMonsterId_default_instance_.Shutdown();
   delete file_level_metadata[35].reflection;
-  _WildSkillWeaponCostModify_default_instance_.Shutdown();
+  _WildSkillStatus_default_instance_.Shutdown();
   delete file_level_metadata[36].reflection;
-  _BroadcastS2C_default_instance_.Shutdown();
+  _WildSkillWeaponCostModify_default_instance_.Shutdown();
   delete file_level_metadata[37].reflection;
-  _ReturnUserMoney_default_instance_.Shutdown();
+  _BroadcastS2C_default_instance_.Shutdown();
   delete file_level_metadata[38].reflection;
-  _HallGsAdditionalGameData1Rsp_default_instance_.Shutdown();
+  _ReturnUserMoney_default_instance_.Shutdown();
   delete file_level_metadata[39].reflection;
-  _AdditionalGameDataRsp_default_instance_.Shutdown();
+  _HallGsAdditionalGameData1Rsp_default_instance_.Shutdown();
   delete file_level_metadata[40].reflection;
-  _RefreshUserFishExp_default_instance_.Shutdown();
+  _AdditionalGameDataRsp_default_instance_.Shutdown();
   delete file_level_metadata[41].reflection;
-  _ArenaInfo_default_instance_.Shutdown();
+  _RefreshUserFishExp_default_instance_.Shutdown();
   delete file_level_metadata[42].reflection;
+  _ArenaInfo_default_instance_.Shutdown();
+  delete file_level_metadata[43].reflection;
 }
 
 void protobuf_InitDefaults_GameMessage_2eproto_impl() {
@@ -818,6 +830,7 @@ void protobuf_InitDefaults_GameMessage_2eproto_impl() {
   _ChangeSkillStatus_default_instance_.DefaultConstruct();
   _SkillHit_default_instance_.DefaultConstruct();
   _PlayerHit_default_instance_.DefaultConstruct();
+  _MonsterEx_default_instance_.DefaultConstruct();
   _NormalEx_default_instance_.DefaultConstruct();
   _SkillList_default_instance_.DefaultConstruct();
   _SkillEx_default_instance_.DefaultConstruct();
@@ -843,8 +856,10 @@ void protobuf_InitDefaults_GameMessage_2eproto_impl() {
       ::SY::GameStationBase::internal_default_instance());
   _ServerFirstSceneRsp_default_instance_.get_mutable()->first_scene_ = const_cast< ::SY::ServerPersonalSceneRsp*>(
       ::SY::ServerPersonalSceneRsp::internal_default_instance());
-  _KingEx_default_instance_.get_mutable()->king_ = const_cast< ::SY::NormalEx*>(
-      ::SY::NormalEx::internal_default_instance());
+  _NormalEx_default_instance_.get_mutable()->monster_ = const_cast< ::SY::MonsterEx*>(
+      ::SY::MonsterEx::internal_default_instance());
+  _KingEx_default_instance_.get_mutable()->king_ = const_cast< ::SY::MonsterEx*>(
+      ::SY::MonsterEx::internal_default_instance());
   _PlayerHitEx_default_instance_.get_mutable()->normalhit_ = const_cast< ::SY::NormalEx*>(
       ::SY::NormalEx::internal_default_instance());
   _PlayerHitEx_default_instance_.get_mutable()->skillhit_ = const_cast< ::SY::SkillEx*>(
@@ -908,65 +923,66 @@ void protobuf_AddDesc_GameMessage_2eproto_impl() {
       "\005\022\037\n\tSkillList\030\004 \003(\0132\014.SY.SkillHit\022\017\n\007Is"
       "Robot\030\005 \001(\010\022\030\n\020HasPayWeaponCost\030\006 \001(\010\022\025\n"
       "\rMonsterIDList\030\007 \003(\005\022\032\n\022SkillHitListHasP"
-      "ay\030\010 \003(\005\"-\n\010NormalEx\022\021\n\tMonsterID\030\001 \002(\005\022"
-      "\016\n\006HasPay\030\002 \001(\010\"@\n\tSkillList\022\017\n\007skillID\030"
-      "\001 \002(\005\022\"\n\014monster_list\030\002 \003(\0132\014.SY.NormalE"
-      "x\",\n\007SkillEx\022!\n\nskill_list\030\001 \003(\0132\r.SY.Sk"
-      "illList\"H\n\006KingEx\022\032\n\004king\030\001 \002(\0132\014.SY.Nor"
-      "malEx\022\"\n\014monster_list\030\002 \003(\0132\014.SY.NormalE"
-      "x\"\257\001\n\013PlayerHitEx\022\017\n\007HitType\030\001 \002(\005\022\017\n\007Ch"
-      "airID\030\002 \001(\005\022\020\n\010WeaponID\030\003 \001(\005\022\017\n\007IsRobot"
-      "\030\004 \001(\010\022\037\n\tNormalHit\030\005 \001(\0132\014.SY.NormalEx\022"
-      "\035\n\010SkillHit\030\006 \001(\0132\013.SY.SkillEx\022\033\n\007KingHi"
-      "t\030\007 \001(\0132\n.SY.KingEx\"\223\001\n\rPlayerHitSync\022\017\n"
-      "\007ChairID\030\001 \001(\005\022\021\n\tMonsterID\030\002 \001(\005\022\020\n\010Wea"
-      "ponID\030\003 \001(\005\022\037\n\tSkillList\030\004 \003(\0132\014.SY.Skil"
-      "lHit\022\024\n\014UserMoneyNum\030\005 \001(\003\022\025\n\rUserTicket"
-      "Num\030\006 \001(\003\"y\n\017MonsterIncoming\022\021\n\tMonsterI"
-      "D\030\001 \001(\005\022\020\n\010KillRate\030\002 \001(\005\022\024\n\014UserMoneyNu"
-      "m\030\003 \001(\005\022\025\n\rUserTicketNum\030\004 \001(\005\022\024\n\014Weapon"
-      "CostEx\030\005 \001(\005\"O\n\021PlayerHitIncoming\022\017\n\007Cha"
-      "irID\030\001 \001(\005\022)\n\014IncomingList\030\002 \003(\0132\023.SY.Mo"
-      "nsterIncoming\"\035\n\005Point\022\t\n\001x\030\001 \001(\005\022\t\n\001y\030\002"
-      " \001(\005\"\246\002\n\014MonsterTrace\022\021\n\tMonsterID\030\001 \001(\005"
-      "\022\016\n\006TypeID\030\002 \001(\005\022\r\n\005CurHP\030\003 \001(\005\022\r\n\005MaxHP"
-      "\030\004 \001(\005\022\r\n\005Speed\030\005 \001(\002\022\024\n\014RespawnIndex\030\006 "
-      "\001(\005\022\"\n\017RespawnPosition\030\007 \003(\0132\t.SY.Point\022"
-      "\"\n\017MoveDestination\030\010 \003(\0132\t.SY.Point\022%\n\022E"
-      "scapseDestination\030\t \003(\0132\t.SY.Point\022\025\n\rDe"
-      "layMoveTime\030\n \001(\002\022\027\n\017DelayEscapeTime\030\013 \001"
-      "(\002\022\021\n\tSpeedRate\030\014 \001(\002\"B\n\rMonsterTraces\022\017"
-      "\n\007IsGroup\030\001 \002(\010\022 \n\006Traces\030\002 \003(\0132\020.SY.Mon"
-      "sterTrace\"!\n\013ChangeScene\022\022\n\nSceneIndex\030\001"
-      " \002(\005\"\032\n\014AllMonsterId\022\n\n\002id\030\001 \001(\005\"\212\001\n\017Wil"
-      "dSkillStatus\022\031\n\021wild_skill_status\030\001 \001(\005\022"
-      "\023\n\013remain_time\030\002 \001(\005\022\034\n\024wild_skill_cost_"
-      "rate\030\003 \001(\002\022)\n\017wild_monster_id\030\004 \003(\0132\020.SY"
-      ".AllMonsterId\"B\n\031WildSkillWeaponCostModi"
-      "fy\022%\n\035wild_skill_weapon_cost_modify\030\001 \001("
-      "\005\"\206\001\n\014BroadcastS2C\022\014\n\004Text\030\001 \001(\t\022\020\n\010User"
-      "Name\030\002 \001(\t\022\020\n\010WeaponID\030\003 \001(\005\022\023\n\013MonsterN"
-      "ame\030\004 \001(\t\022\026\n\016RewardMoneyNum\030\005 \001(\005\022\027\n\017Rew"
-      "ardTicketNum\030\006 \001(\005\"~\n\017ReturnUserMoney\022\017\n"
-      "\007ChairID\030\001 \001(\005\022*\n\014ReturnReason\030\002 \001(\0162\024.S"
-      "Y.ReturnReasonType\022\022\n\nReturnData\030\003 \001(\005\022\032"
-      "\n\022ReturnUserMoneyNum\030\004 \001(\003\"s\n\034HallGsAddi"
-      "tionalGameData1Rsp\022\r\n\005index\030\001 \002(\r\022\021\n\tuse"
-      "r_dbid\030\002 \002(\005\022\014\n\004type\030\003 \001(\005\022\014\n\004size\030\004 \001(\005"
-      "\022\025\n\radd_game_data\030\005 \001(\t\"d\n\025AdditionalGam"
-      "eDataRsp\022\016\n\006result\030\001 \002(\005\022\017\n\007game_id\030\002 \002("
-      "\005\022\021\n\tuser_dbid\030\003 \002(\005\022\027\n\017additional_data\030"
-      "\004 \001(\t\"@\n\022RefreshUserFishExp\022\016\n\006userID\030\001 "
-      "\002(\005\022\r\n\005level\030\002 \002(\005\022\013\n\003exp\030\003 \001(\004\"t\n\tArena"
-      "Info\022\n\n\002id\030\001 \002(\005\022\017\n\007game_id\030\002 \002(\005\022\014\n\004typ"
-      "e\030\003 \002(\005\022\021\n\tmin_money\030\004 \001(\005\022\014\n\004rule\030\005 \001(\003"
-      "\022\r\n\005level\030\006 \001(\005\022\014\n\004name\030\007 \001(\t*6\n\013SkillSt"
-      "atus\022\014\n\010InActive\020\000\022\013\n\007Actived\020\001\022\014\n\010Disab"
-      "led\020\002*2\n\020ReturnReasonType\022\014\n\010RRT_None\020\000\022"
-      "\020\n\014RRT_BuySkill\020\001"
+      "ay\030\010 \003(\005\".\n\tMonsterEx\022\021\n\tMonsterID\030\001 \002(\005"
+      "\022\016\n\006HasPay\030\002 \002(\010\"*\n\010NormalEx\022\036\n\007monster\030"
+      "\001 \002(\0132\r.SY.MonsterEx\"A\n\tSkillList\022\017\n\007ski"
+      "llID\030\001 \002(\005\022#\n\014monster_list\030\002 \003(\0132\r.SY.Mo"
+      "nsterEx\",\n\007SkillEx\022!\n\nskill_list\030\001 \003(\0132\r"
+      ".SY.SkillList\"J\n\006KingEx\022\033\n\004king\030\001 \002(\0132\r."
+      "SY.MonsterEx\022#\n\014monster_list\030\002 \003(\0132\r.SY."
+      "MonsterEx\"\257\001\n\013PlayerHitEx\022\017\n\007HitType\030\001 \002"
+      "(\005\022\017\n\007ChairID\030\002 \001(\005\022\020\n\010WeaponID\030\003 \001(\005\022\017\n"
+      "\007IsRobot\030\004 \001(\010\022\037\n\tNormalHit\030\005 \001(\0132\014.SY.N"
+      "ormalEx\022\035\n\010SkillHit\030\006 \001(\0132\013.SY.SkillEx\022\033"
+      "\n\007KingHit\030\007 \001(\0132\n.SY.KingEx\"\223\001\n\rPlayerHi"
+      "tSync\022\017\n\007ChairID\030\001 \001(\005\022\021\n\tMonsterID\030\002 \001("
+      "\005\022\020\n\010WeaponID\030\003 \001(\005\022\037\n\tSkillList\030\004 \003(\0132\014"
+      ".SY.SkillHit\022\024\n\014UserMoneyNum\030\005 \001(\003\022\025\n\rUs"
+      "erTicketNum\030\006 \001(\003\"y\n\017MonsterIncoming\022\021\n\t"
+      "MonsterID\030\001 \001(\005\022\020\n\010KillRate\030\002 \001(\005\022\024\n\014Use"
+      "rMoneyNum\030\003 \001(\005\022\025\n\rUserTicketNum\030\004 \001(\005\022\024"
+      "\n\014WeaponCostEx\030\005 \001(\005\"O\n\021PlayerHitIncomin"
+      "g\022\017\n\007ChairID\030\001 \001(\005\022)\n\014IncomingList\030\002 \003(\013"
+      "2\023.SY.MonsterIncoming\"\035\n\005Point\022\t\n\001x\030\001 \001("
+      "\005\022\t\n\001y\030\002 \001(\005\"\246\002\n\014MonsterTrace\022\021\n\tMonster"
+      "ID\030\001 \001(\005\022\016\n\006TypeID\030\002 \001(\005\022\r\n\005CurHP\030\003 \001(\005\022"
+      "\r\n\005MaxHP\030\004 \001(\005\022\r\n\005Speed\030\005 \001(\002\022\024\n\014Respawn"
+      "Index\030\006 \001(\005\022\"\n\017RespawnPosition\030\007 \003(\0132\t.S"
+      "Y.Point\022\"\n\017MoveDestination\030\010 \003(\0132\t.SY.Po"
+      "int\022%\n\022EscapseDestination\030\t \003(\0132\t.SY.Poi"
+      "nt\022\025\n\rDelayMoveTime\030\n \001(\002\022\027\n\017DelayEscape"
+      "Time\030\013 \001(\002\022\021\n\tSpeedRate\030\014 \001(\002\"B\n\rMonster"
+      "Traces\022\017\n\007IsGroup\030\001 \002(\010\022 \n\006Traces\030\002 \003(\0132"
+      "\020.SY.MonsterTrace\"!\n\013ChangeScene\022\022\n\nScen"
+      "eIndex\030\001 \002(\005\"\032\n\014AllMonsterId\022\n\n\002id\030\001 \001(\005"
+      "\"\212\001\n\017WildSkillStatus\022\031\n\021wild_skill_statu"
+      "s\030\001 \001(\005\022\023\n\013remain_time\030\002 \001(\005\022\034\n\024wild_ski"
+      "ll_cost_rate\030\003 \001(\002\022)\n\017wild_monster_id\030\004 "
+      "\003(\0132\020.SY.AllMonsterId\"B\n\031WildSkillWeapon"
+      "CostModify\022%\n\035wild_skill_weapon_cost_mod"
+      "ify\030\001 \001(\005\"\206\001\n\014BroadcastS2C\022\014\n\004Text\030\001 \001(\t"
+      "\022\020\n\010UserName\030\002 \001(\t\022\020\n\010WeaponID\030\003 \001(\005\022\023\n\013"
+      "MonsterName\030\004 \001(\t\022\026\n\016RewardMoneyNum\030\005 \001("
+      "\005\022\027\n\017RewardTicketNum\030\006 \001(\005\"~\n\017ReturnUser"
+      "Money\022\017\n\007ChairID\030\001 \001(\005\022*\n\014ReturnReason\030\002"
+      " \001(\0162\024.SY.ReturnReasonType\022\022\n\nReturnData"
+      "\030\003 \001(\005\022\032\n\022ReturnUserMoneyNum\030\004 \001(\003\"s\n\034Ha"
+      "llGsAdditionalGameData1Rsp\022\r\n\005index\030\001 \002("
+      "\r\022\021\n\tuser_dbid\030\002 \002(\005\022\014\n\004type\030\003 \001(\005\022\014\n\004si"
+      "ze\030\004 \001(\005\022\025\n\radd_game_data\030\005 \001(\t\"d\n\025Addit"
+      "ionalGameDataRsp\022\016\n\006result\030\001 \002(\005\022\017\n\007game"
+      "_id\030\002 \002(\005\022\021\n\tuser_dbid\030\003 \002(\005\022\027\n\017addition"
+      "al_data\030\004 \001(\t\"@\n\022RefreshUserFishExp\022\016\n\006u"
+      "serID\030\001 \002(\005\022\r\n\005level\030\002 \002(\005\022\013\n\003exp\030\003 \001(\004\""
+      "t\n\tArenaInfo\022\n\n\002id\030\001 \002(\005\022\017\n\007game_id\030\002 \002("
+      "\005\022\014\n\004type\030\003 \002(\005\022\021\n\tmin_money\030\004 \001(\005\022\014\n\004ru"
+      "le\030\005 \001(\003\022\r\n\005level\030\006 \001(\005\022\014\n\004name\030\007 \001(\t*6\n"
+      "\013SkillStatus\022\014\n\010InActive\020\000\022\013\n\007Actived\020\001\022"
+      "\014\n\010Disabled\020\002*2\n\020ReturnReasonType\022\014\n\010RRT"
+      "_None\020\000\022\020\n\014RRT_BuySkill\020\001"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 4137);
+      descriptor, 4185);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "GameMessage.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&protobuf_ShutdownFile_GameMessage_2eproto);
@@ -9891,19 +9907,19 @@ PlayerHit::mutable_skillhitlisthaspay() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int NormalEx::kMonsterIDFieldNumber;
-const int NormalEx::kHasPayFieldNumber;
+const int MonsterEx::kMonsterIDFieldNumber;
+const int MonsterEx::kHasPayFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-NormalEx::NormalEx()
+MonsterEx::MonsterEx()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
     protobuf_InitDefaults_GameMessage_2eproto();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:SY.NormalEx)
+  // @@protoc_insertion_point(constructor:SY.MonsterEx)
 }
-NormalEx::NormalEx(const NormalEx& from)
+MonsterEx::MonsterEx(const MonsterEx& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       _has_bits_(from._has_bits_),
@@ -9912,48 +9928,48 @@ NormalEx::NormalEx(const NormalEx& from)
   ::memcpy(&monsterid_, &from.monsterid_,
     reinterpret_cast<char*>(&haspay_) -
     reinterpret_cast<char*>(&monsterid_) + sizeof(haspay_));
-  // @@protoc_insertion_point(copy_constructor:SY.NormalEx)
+  // @@protoc_insertion_point(copy_constructor:SY.MonsterEx)
 }
 
-void NormalEx::SharedCtor() {
+void MonsterEx::SharedCtor() {
   _cached_size_ = 0;
   ::memset(&monsterid_, 0, reinterpret_cast<char*>(&haspay_) -
     reinterpret_cast<char*>(&monsterid_) + sizeof(haspay_));
 }
 
-NormalEx::~NormalEx() {
-  // @@protoc_insertion_point(destructor:SY.NormalEx)
+MonsterEx::~MonsterEx() {
+  // @@protoc_insertion_point(destructor:SY.MonsterEx)
   SharedDtor();
 }
 
-void NormalEx::SharedDtor() {
+void MonsterEx::SharedDtor() {
 }
 
-void NormalEx::SetCachedSize(int size) const {
+void MonsterEx::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* NormalEx::descriptor() {
+const ::google::protobuf::Descriptor* MonsterEx::descriptor() {
   protobuf_AssignDescriptorsOnce();
   return file_level_metadata[22].descriptor;
 }
 
-const NormalEx& NormalEx::default_instance() {
+const MonsterEx& MonsterEx::default_instance() {
   protobuf_InitDefaults_GameMessage_2eproto();
   return *internal_default_instance();
 }
 
-NormalEx* NormalEx::New(::google::protobuf::Arena* arena) const {
-  NormalEx* n = new NormalEx;
+MonsterEx* MonsterEx::New(::google::protobuf::Arena* arena) const {
+  MonsterEx* n = new MonsterEx;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void NormalEx::Clear() {
-// @@protoc_insertion_point(message_clear_start:SY.NormalEx)
+void MonsterEx::Clear() {
+// @@protoc_insertion_point(message_clear_start:SY.MonsterEx)
   if (_has_bits_[0 / 32] & 3u) {
     ::memset(&monsterid_, 0, reinterpret_cast<char*>(&haspay_) -
       reinterpret_cast<char*>(&monsterid_) + sizeof(haspay_));
@@ -9962,11 +9978,11 @@ void NormalEx::Clear() {
   _internal_metadata_.Clear();
 }
 
-bool NormalEx::MergePartialFromCodedStream(
+bool MonsterEx::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:SY.NormalEx)
+  // @@protoc_insertion_point(parse_start:SY.MonsterEx)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -9985,13 +10001,339 @@ bool NormalEx::MergePartialFromCodedStream(
         break;
       }
 
-      // optional bool HasPay = 2;
+      // required bool HasPay = 2;
       case 2: {
         if (tag == 16u) {
           set_has_haspay();
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
                  input, &haspay_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0 ||
+            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:SY.MonsterEx)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:SY.MonsterEx)
+  return false;
+#undef DO_
+}
+
+void MonsterEx::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:SY.MonsterEx)
+  // required int32 MonsterID = 1;
+  if (has_monsterid()) {
+    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->monsterid(), output);
+  }
+
+  // required bool HasPay = 2;
+  if (has_haspay()) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->haspay(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:SY.MonsterEx)
+}
+
+::google::protobuf::uint8* MonsterEx::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  (void)deterministic; // Unused
+  // @@protoc_insertion_point(serialize_to_array_start:SY.MonsterEx)
+  // required int32 MonsterID = 1;
+  if (has_monsterid()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->monsterid(), target);
+  }
+
+  // required bool HasPay = 2;
+  if (has_haspay()) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->haspay(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:SY.MonsterEx)
+  return target;
+}
+
+size_t MonsterEx::RequiredFieldsByteSizeFallback() const {
+// @@protoc_insertion_point(required_fields_byte_size_fallback_start:SY.MonsterEx)
+  size_t total_size = 0;
+
+  if (has_monsterid()) {
+    // required int32 MonsterID = 1;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->monsterid());
+  }
+
+  if (has_haspay()) {
+    // required bool HasPay = 2;
+    total_size += 1 + 1;
+  }
+
+  return total_size;
+}
+size_t MonsterEx::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:SY.MonsterEx)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        unknown_fields());
+  }
+  if (((_has_bits_[0] & 0x00000003) ^ 0x00000003) == 0) {  // All required fields are present.
+    // required int32 MonsterID = 1;
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::Int32Size(
+        this->monsterid());
+
+    // required bool HasPay = 2;
+    total_size += 1 + 1;
+
+  } else {
+    total_size += RequiredFieldsByteSizeFallback();
+  }
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void MonsterEx::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:SY.MonsterEx)
+  GOOGLE_DCHECK_NE(&from, this);
+  const MonsterEx* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const MonsterEx>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:SY.MonsterEx)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:SY.MonsterEx)
+    MergeFrom(*source);
+  }
+}
+
+void MonsterEx::MergeFrom(const MonsterEx& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:SY.MonsterEx)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from._has_bits_[0 / 32] & 3u) {
+    if (from.has_monsterid()) {
+      set_monsterid(from.monsterid());
+    }
+    if (from.has_haspay()) {
+      set_haspay(from.haspay());
+    }
+  }
+}
+
+void MonsterEx::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:SY.MonsterEx)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void MonsterEx::CopyFrom(const MonsterEx& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:SY.MonsterEx)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool MonsterEx::IsInitialized() const {
+  if ((_has_bits_[0] & 0x00000003) != 0x00000003) return false;
+  return true;
+}
+
+void MonsterEx::Swap(MonsterEx* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void MonsterEx::InternalSwap(MonsterEx* other) {
+  std::swap(monsterid_, other->monsterid_);
+  std::swap(haspay_, other->haspay_);
+  std::swap(_has_bits_[0], other->_has_bits_[0]);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata MonsterEx::GetMetadata() const {
+  protobuf_AssignDescriptorsOnce();
+  return file_level_metadata[22];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// MonsterEx
+
+// required int32 MonsterID = 1;
+bool MonsterEx::has_monsterid() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+void MonsterEx::set_has_monsterid() {
+  _has_bits_[0] |= 0x00000001u;
+}
+void MonsterEx::clear_has_monsterid() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+void MonsterEx::clear_monsterid() {
+  monsterid_ = 0;
+  clear_has_monsterid();
+}
+::google::protobuf::int32 MonsterEx::monsterid() const {
+  // @@protoc_insertion_point(field_get:SY.MonsterEx.MonsterID)
+  return monsterid_;
+}
+void MonsterEx::set_monsterid(::google::protobuf::int32 value) {
+  set_has_monsterid();
+  monsterid_ = value;
+  // @@protoc_insertion_point(field_set:SY.MonsterEx.MonsterID)
+}
+
+// required bool HasPay = 2;
+bool MonsterEx::has_haspay() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+void MonsterEx::set_has_haspay() {
+  _has_bits_[0] |= 0x00000002u;
+}
+void MonsterEx::clear_has_haspay() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+void MonsterEx::clear_haspay() {
+  haspay_ = false;
+  clear_has_haspay();
+}
+bool MonsterEx::haspay() const {
+  // @@protoc_insertion_point(field_get:SY.MonsterEx.HasPay)
+  return haspay_;
+}
+void MonsterEx::set_haspay(bool value) {
+  set_has_haspay();
+  haspay_ = value;
+  // @@protoc_insertion_point(field_set:SY.MonsterEx.HasPay)
+}
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int NormalEx::kMonsterFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+NormalEx::NormalEx()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_InitDefaults_GameMessage_2eproto();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:SY.NormalEx)
+}
+NormalEx::NormalEx(const NormalEx& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _has_bits_(from._has_bits_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  if (from.has_monster()) {
+    monster_ = new ::SY::MonsterEx(*from.monster_);
+  } else {
+    monster_ = NULL;
+  }
+  // @@protoc_insertion_point(copy_constructor:SY.NormalEx)
+}
+
+void NormalEx::SharedCtor() {
+  _cached_size_ = 0;
+  monster_ = NULL;
+}
+
+NormalEx::~NormalEx() {
+  // @@protoc_insertion_point(destructor:SY.NormalEx)
+  SharedDtor();
+}
+
+void NormalEx::SharedDtor() {
+  if (this != internal_default_instance()) {
+    delete monster_;
+  }
+}
+
+void NormalEx::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* NormalEx::descriptor() {
+  protobuf_AssignDescriptorsOnce();
+  return file_level_metadata[23].descriptor;
+}
+
+const NormalEx& NormalEx::default_instance() {
+  protobuf_InitDefaults_GameMessage_2eproto();
+  return *internal_default_instance();
+}
+
+NormalEx* NormalEx::New(::google::protobuf::Arena* arena) const {
+  NormalEx* n = new NormalEx;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void NormalEx::Clear() {
+// @@protoc_insertion_point(message_clear_start:SY.NormalEx)
+  if (has_monster()) {
+    GOOGLE_DCHECK(monster_ != NULL);
+    monster_->::SY::MonsterEx::Clear();
+  }
+  _has_bits_.Clear();
+  _internal_metadata_.Clear();
+}
+
+bool NormalEx::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:SY.NormalEx)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // required .SY.MonsterEx monster = 1;
+      case 1: {
+        if (tag == 10u) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+               input, mutable_monster()));
         } else {
           goto handle_unusual;
         }
@@ -10023,14 +10365,10 @@ failure:
 void NormalEx::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SY.NormalEx)
-  // required int32 MonsterID = 1;
-  if (has_monsterid()) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->monsterid(), output);
-  }
-
-  // optional bool HasPay = 2;
-  if (has_haspay()) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->haspay(), output);
+  // required .SY.MonsterEx monster = 1;
+  if (has_monster()) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      1, *this->monster_, output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -10044,14 +10382,11 @@ void NormalEx::SerializeWithCachedSizes(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:SY.NormalEx)
-  // required int32 MonsterID = 1;
-  if (has_monsterid()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->monsterid(), target);
-  }
-
-  // optional bool HasPay = 2;
-  if (has_haspay()) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->haspay(), target);
+  // required .SY.MonsterEx monster = 1;
+  if (has_monster()) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageNoVirtualToArray(
+        1, *this->monster_, false, target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -10071,17 +10406,12 @@ size_t NormalEx::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  // required int32 MonsterID = 1;
-  if (has_monsterid()) {
+  // required .SY.MonsterEx monster = 1;
+  if (has_monster()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
-        this->monsterid());
+      ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
+        *this->monster_);
   }
-  // optional bool HasPay = 2;
-  if (has_haspay()) {
-    total_size += 1 + 1;
-  }
-
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -10108,13 +10438,8 @@ void NormalEx::MergeFrom(const NormalEx& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SY.NormalEx)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  if (from._has_bits_[0 / 32] & 3u) {
-    if (from.has_monsterid()) {
-      set_monsterid(from.monsterid());
-    }
-    if (from.has_haspay()) {
-      set_haspay(from.haspay());
-    }
+  if (from.has_monster()) {
+    mutable_monster()->::SY::MonsterEx::MergeFrom(from.monster());
   }
 }
 
@@ -10134,6 +10459,9 @@ void NormalEx::CopyFrom(const NormalEx& from) {
 
 bool NormalEx::IsInitialized() const {
   if ((_has_bits_[0] & 0x00000001) != 0x00000001) return false;
+  if (has_monster()) {
+    if (!this->monster_->IsInitialized()) return false;
+  }
   return true;
 }
 
@@ -10142,8 +10470,7 @@ void NormalEx::Swap(NormalEx* other) {
   InternalSwap(other);
 }
 void NormalEx::InternalSwap(NormalEx* other) {
-  std::swap(monsterid_, other->monsterid_);
-  std::swap(haspay_, other->haspay_);
+  std::swap(monster_, other->monster_);
   std::swap(_has_bits_[0], other->_has_bits_[0]);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -10151,58 +10478,55 @@ void NormalEx::InternalSwap(NormalEx* other) {
 
 ::google::protobuf::Metadata NormalEx::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[22];
+  return file_level_metadata[23];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // NormalEx
 
-// required int32 MonsterID = 1;
-bool NormalEx::has_monsterid() const {
+// required .SY.MonsterEx monster = 1;
+bool NormalEx::has_monster() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-void NormalEx::set_has_monsterid() {
+void NormalEx::set_has_monster() {
   _has_bits_[0] |= 0x00000001u;
 }
-void NormalEx::clear_has_monsterid() {
+void NormalEx::clear_has_monster() {
   _has_bits_[0] &= ~0x00000001u;
 }
-void NormalEx::clear_monsterid() {
-  monsterid_ = 0;
-  clear_has_monsterid();
+void NormalEx::clear_monster() {
+  if (monster_ != NULL) monster_->::SY::MonsterEx::Clear();
+  clear_has_monster();
 }
-::google::protobuf::int32 NormalEx::monsterid() const {
-  // @@protoc_insertion_point(field_get:SY.NormalEx.MonsterID)
-  return monsterid_;
+const ::SY::MonsterEx& NormalEx::monster() const {
+  // @@protoc_insertion_point(field_get:SY.NormalEx.monster)
+  return monster_ != NULL ? *monster_
+                         : *::SY::MonsterEx::internal_default_instance();
 }
-void NormalEx::set_monsterid(::google::protobuf::int32 value) {
-  set_has_monsterid();
-  monsterid_ = value;
-  // @@protoc_insertion_point(field_set:SY.NormalEx.MonsterID)
+::SY::MonsterEx* NormalEx::mutable_monster() {
+  set_has_monster();
+  if (monster_ == NULL) {
+    monster_ = new ::SY::MonsterEx;
+  }
+  // @@protoc_insertion_point(field_mutable:SY.NormalEx.monster)
+  return monster_;
 }
-
-// optional bool HasPay = 2;
-bool NormalEx::has_haspay() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
+::SY::MonsterEx* NormalEx::release_monster() {
+  // @@protoc_insertion_point(field_release:SY.NormalEx.monster)
+  clear_has_monster();
+  ::SY::MonsterEx* temp = monster_;
+  monster_ = NULL;
+  return temp;
 }
-void NormalEx::set_has_haspay() {
-  _has_bits_[0] |= 0x00000002u;
-}
-void NormalEx::clear_has_haspay() {
-  _has_bits_[0] &= ~0x00000002u;
-}
-void NormalEx::clear_haspay() {
-  haspay_ = false;
-  clear_has_haspay();
-}
-bool NormalEx::haspay() const {
-  // @@protoc_insertion_point(field_get:SY.NormalEx.HasPay)
-  return haspay_;
-}
-void NormalEx::set_haspay(bool value) {
-  set_has_haspay();
-  haspay_ = value;
-  // @@protoc_insertion_point(field_set:SY.NormalEx.HasPay)
+void NormalEx::set_allocated_monster(::SY::MonsterEx* monster) {
+  delete monster_;
+  monster_ = monster;
+  if (monster) {
+    set_has_monster();
+  } else {
+    clear_has_monster();
+  }
+  // @@protoc_insertion_point(field_set_allocated:SY.NormalEx.monster)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -10253,7 +10577,7 @@ void SkillList::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* SkillList::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[23].descriptor;
+  return file_level_metadata[24].descriptor;
 }
 
 const SkillList& SkillList::default_instance() {
@@ -10300,7 +10624,7 @@ bool SkillList::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .SY.NormalEx monster_list = 2;
+      // repeated .SY.MonsterEx monster_list = 2;
       case 2: {
         if (tag == 18u) {
           DO_(input->IncrementRecursionDepth());
@@ -10343,7 +10667,7 @@ void SkillList::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->skillid(), output);
   }
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   for (unsigned int i = 0, n = this->monster_list_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->monster_list(i), output);
@@ -10365,7 +10689,7 @@ void SkillList::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->skillid(), target);
   }
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   for (unsigned int i = 0, n = this->monster_list_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -10395,7 +10719,7 @@ size_t SkillList::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormatLite::Int32Size(
         this->skillid());
   }
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   {
     unsigned int count = this->monster_list_size();
     total_size += 1UL * count;
@@ -10472,7 +10796,7 @@ void SkillList::InternalSwap(SkillList* other) {
 
 ::google::protobuf::Metadata SkillList::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[23];
+  return file_level_metadata[24];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -10502,31 +10826,31 @@ void SkillList::set_skillid(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:SY.SkillList.skillID)
 }
 
-// repeated .SY.NormalEx monster_list = 2;
+// repeated .SY.MonsterEx monster_list = 2;
 int SkillList::monster_list_size() const {
   return monster_list_.size();
 }
 void SkillList::clear_monster_list() {
   monster_list_.Clear();
 }
-const ::SY::NormalEx& SkillList::monster_list(int index) const {
+const ::SY::MonsterEx& SkillList::monster_list(int index) const {
   // @@protoc_insertion_point(field_get:SY.SkillList.monster_list)
   return monster_list_.Get(index);
 }
-::SY::NormalEx* SkillList::mutable_monster_list(int index) {
+::SY::MonsterEx* SkillList::mutable_monster_list(int index) {
   // @@protoc_insertion_point(field_mutable:SY.SkillList.monster_list)
   return monster_list_.Mutable(index);
 }
-::SY::NormalEx* SkillList::add_monster_list() {
+::SY::MonsterEx* SkillList::add_monster_list() {
   // @@protoc_insertion_point(field_add:SY.SkillList.monster_list)
   return monster_list_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
 SkillList::mutable_monster_list() {
   // @@protoc_insertion_point(field_mutable_list:SY.SkillList.monster_list)
   return &monster_list_;
 }
-const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
 SkillList::monster_list() const {
   // @@protoc_insertion_point(field_list:SY.SkillList.monster_list)
   return monster_list_;
@@ -10577,7 +10901,7 @@ void SkillEx::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* SkillEx::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[24].descriptor;
+  return file_level_metadata[25].descriptor;
 }
 
 const SkillEx& SkillEx::default_instance() {
@@ -10761,7 +11085,7 @@ void SkillEx::InternalSwap(SkillEx* other) {
 
 ::google::protobuf::Metadata SkillEx::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[24];
+  return file_level_metadata[25];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -10822,7 +11146,7 @@ KingEx::KingEx(const KingEx& from)
       monster_list_(from.monster_list_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_king()) {
-    king_ = new ::SY::NormalEx(*from.king_);
+    king_ = new ::SY::MonsterEx(*from.king_);
   } else {
     king_ = NULL;
   }
@@ -10852,7 +11176,7 @@ void KingEx::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* KingEx::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[25].descriptor;
+  return file_level_metadata[26].descriptor;
 }
 
 const KingEx& KingEx::default_instance() {
@@ -10873,7 +11197,7 @@ void KingEx::Clear() {
   monster_list_.Clear();
   if (has_king()) {
     GOOGLE_DCHECK(king_ != NULL);
-    king_->::SY::NormalEx::Clear();
+    king_->::SY::MonsterEx::Clear();
   }
   _has_bits_.Clear();
   _internal_metadata_.Clear();
@@ -10889,7 +11213,7 @@ bool KingEx::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required .SY.NormalEx king = 1;
+      // required .SY.MonsterEx king = 1;
       case 1: {
         if (tag == 10u) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
@@ -10900,7 +11224,7 @@ bool KingEx::MergePartialFromCodedStream(
         break;
       }
 
-      // repeated .SY.NormalEx monster_list = 2;
+      // repeated .SY.MonsterEx monster_list = 2;
       case 2: {
         if (tag == 18u) {
           DO_(input->IncrementRecursionDepth());
@@ -10938,13 +11262,13 @@ failure:
 void KingEx::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SY.KingEx)
-  // required .SY.NormalEx king = 1;
+  // required .SY.MonsterEx king = 1;
   if (has_king()) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, *this->king_, output);
   }
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   for (unsigned int i = 0, n = this->monster_list_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->monster_list(i), output);
@@ -10961,14 +11285,14 @@ void KingEx::SerializeWithCachedSizes(
     bool deterministic, ::google::protobuf::uint8* target) const {
   (void)deterministic; // Unused
   // @@protoc_insertion_point(serialize_to_array_start:SY.KingEx)
-  // required .SY.NormalEx king = 1;
+  // required .SY.MonsterEx king = 1;
   if (has_king()) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         1, *this->king_, false, target);
   }
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   for (unsigned int i = 0, n = this->monster_list_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
@@ -10992,13 +11316,13 @@ size_t KingEx::ByteSizeLong() const {
       ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
         unknown_fields());
   }
-  // required .SY.NormalEx king = 1;
+  // required .SY.MonsterEx king = 1;
   if (has_king()) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->king_);
   }
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   {
     unsigned int count = this->monster_list_size();
     total_size += 1UL * count;
@@ -11037,7 +11361,7 @@ void KingEx::MergeFrom(const KingEx& from) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   monster_list_.MergeFrom(from.monster_list_);
   if (from.has_king()) {
-    mutable_king()->::SY::NormalEx::MergeFrom(from.king());
+    mutable_king()->::SY::MonsterEx::MergeFrom(from.king());
   }
 }
 
@@ -11078,13 +11402,13 @@ void KingEx::InternalSwap(KingEx* other) {
 
 ::google::protobuf::Metadata KingEx::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[25];
+  return file_level_metadata[26];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // KingEx
 
-// required .SY.NormalEx king = 1;
+// required .SY.MonsterEx king = 1;
 bool KingEx::has_king() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -11095,30 +11419,30 @@ void KingEx::clear_has_king() {
   _has_bits_[0] &= ~0x00000001u;
 }
 void KingEx::clear_king() {
-  if (king_ != NULL) king_->::SY::NormalEx::Clear();
+  if (king_ != NULL) king_->::SY::MonsterEx::Clear();
   clear_has_king();
 }
-const ::SY::NormalEx& KingEx::king() const {
+const ::SY::MonsterEx& KingEx::king() const {
   // @@protoc_insertion_point(field_get:SY.KingEx.king)
   return king_ != NULL ? *king_
-                         : *::SY::NormalEx::internal_default_instance();
+                         : *::SY::MonsterEx::internal_default_instance();
 }
-::SY::NormalEx* KingEx::mutable_king() {
+::SY::MonsterEx* KingEx::mutable_king() {
   set_has_king();
   if (king_ == NULL) {
-    king_ = new ::SY::NormalEx;
+    king_ = new ::SY::MonsterEx;
   }
   // @@protoc_insertion_point(field_mutable:SY.KingEx.king)
   return king_;
 }
-::SY::NormalEx* KingEx::release_king() {
+::SY::MonsterEx* KingEx::release_king() {
   // @@protoc_insertion_point(field_release:SY.KingEx.king)
   clear_has_king();
-  ::SY::NormalEx* temp = king_;
+  ::SY::MonsterEx* temp = king_;
   king_ = NULL;
   return temp;
 }
-void KingEx::set_allocated_king(::SY::NormalEx* king) {
+void KingEx::set_allocated_king(::SY::MonsterEx* king) {
   delete king_;
   king_ = king;
   if (king) {
@@ -11129,31 +11453,31 @@ void KingEx::set_allocated_king(::SY::NormalEx* king) {
   // @@protoc_insertion_point(field_set_allocated:SY.KingEx.king)
 }
 
-// repeated .SY.NormalEx monster_list = 2;
+// repeated .SY.MonsterEx monster_list = 2;
 int KingEx::monster_list_size() const {
   return monster_list_.size();
 }
 void KingEx::clear_monster_list() {
   monster_list_.Clear();
 }
-const ::SY::NormalEx& KingEx::monster_list(int index) const {
+const ::SY::MonsterEx& KingEx::monster_list(int index) const {
   // @@protoc_insertion_point(field_get:SY.KingEx.monster_list)
   return monster_list_.Get(index);
 }
-::SY::NormalEx* KingEx::mutable_monster_list(int index) {
+::SY::MonsterEx* KingEx::mutable_monster_list(int index) {
   // @@protoc_insertion_point(field_mutable:SY.KingEx.monster_list)
   return monster_list_.Mutable(index);
 }
-::SY::NormalEx* KingEx::add_monster_list() {
+::SY::MonsterEx* KingEx::add_monster_list() {
   // @@protoc_insertion_point(field_add:SY.KingEx.monster_list)
   return monster_list_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
 KingEx::mutable_monster_list() {
   // @@protoc_insertion_point(field_mutable_list:SY.KingEx.monster_list)
   return &monster_list_;
 }
-const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
 KingEx::monster_list() const {
   // @@protoc_insertion_point(field_list:SY.KingEx.monster_list)
   return monster_list_;
@@ -11238,7 +11562,7 @@ void PlayerHitEx::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* PlayerHitEx::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[26].descriptor;
+  return file_level_metadata[27].descriptor;
 }
 
 const PlayerHitEx& PlayerHitEx::default_instance() {
@@ -11653,7 +11977,7 @@ void PlayerHitEx::InternalSwap(PlayerHitEx* other) {
 
 ::google::protobuf::Metadata PlayerHitEx::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[26];
+  return file_level_metadata[27];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -11945,7 +12269,7 @@ void PlayerHitSync::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* PlayerHitSync::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[27].descriptor;
+  return file_level_metadata[28].descriptor;
 }
 
 const PlayerHitSync& PlayerHitSync::default_instance() {
@@ -12306,7 +12630,7 @@ void PlayerHitSync::InternalSwap(PlayerHitSync* other) {
 
 ::google::protobuf::Metadata PlayerHitSync::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[27];
+  return file_level_metadata[28];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -12515,7 +12839,7 @@ void MonsterIncoming::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MonsterIncoming::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[28].descriptor;
+  return file_level_metadata[29].descriptor;
 }
 
 const MonsterIncoming& MonsterIncoming::default_instance() {
@@ -12836,7 +13160,7 @@ void MonsterIncoming::InternalSwap(MonsterIncoming* other) {
 
 ::google::protobuf::Metadata MonsterIncoming::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[28];
+  return file_level_metadata[29];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -13010,7 +13334,7 @@ void PlayerHitIncoming::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* PlayerHitIncoming::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[29].descriptor;
+  return file_level_metadata[30].descriptor;
 }
 
 const PlayerHitIncoming& PlayerHitIncoming::default_instance() {
@@ -13228,7 +13552,7 @@ void PlayerHitIncoming::InternalSwap(PlayerHitIncoming* other) {
 
 ::google::protobuf::Metadata PlayerHitIncoming::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[29];
+  return file_level_metadata[30];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -13338,7 +13662,7 @@ void Point::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* Point::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[30].descriptor;
+  return file_level_metadata[31].descriptor;
 }
 
 const Point& Point::default_instance() {
@@ -13557,7 +13881,7 @@ void Point::InternalSwap(Point* other) {
 
 ::google::protobuf::Metadata Point::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[30];
+  return file_level_metadata[31];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -13674,7 +13998,7 @@ void MonsterTrace::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MonsterTrace::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[31].descriptor;
+  return file_level_metadata[32].descriptor;
 }
 
 const MonsterTrace& MonsterTrace::default_instance() {
@@ -14244,7 +14568,7 @@ void MonsterTrace::InternalSwap(MonsterTrace* other) {
 
 ::google::protobuf::Metadata MonsterTrace::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[31];
+  return file_level_metadata[32];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -14604,7 +14928,7 @@ void MonsterTraces::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* MonsterTraces::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[32].descriptor;
+  return file_level_metadata[33].descriptor;
 }
 
 const MonsterTraces& MonsterTraces::default_instance() {
@@ -14820,7 +15144,7 @@ void MonsterTraces::InternalSwap(MonsterTraces* other) {
 
 ::google::protobuf::Metadata MonsterTraces::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[32];
+  return file_level_metadata[33];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -14926,7 +15250,7 @@ void ChangeScene::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ChangeScene::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[33].descriptor;
+  return file_level_metadata[34].descriptor;
 }
 
 const ChangeScene& ChangeScene::default_instance() {
@@ -15104,7 +15428,7 @@ void ChangeScene::InternalSwap(ChangeScene* other) {
 
 ::google::protobuf::Metadata ChangeScene::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[33];
+  return file_level_metadata[34];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -15180,7 +15504,7 @@ void AllMonsterId::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AllMonsterId::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[34].descriptor;
+  return file_level_metadata[35].descriptor;
 }
 
 const AllMonsterId& AllMonsterId::default_instance() {
@@ -15358,7 +15682,7 @@ void AllMonsterId::InternalSwap(AllMonsterId* other) {
 
 ::google::protobuf::Metadata AllMonsterId::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[34];
+  return file_level_metadata[35];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -15441,7 +15765,7 @@ void WildSkillStatus::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* WildSkillStatus::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[35].descriptor;
+  return file_level_metadata[36].descriptor;
 }
 
 const WildSkillStatus& WildSkillStatus::default_instance() {
@@ -15732,7 +16056,7 @@ void WildSkillStatus::InternalSwap(WildSkillStatus* other) {
 
 ::google::protobuf::Metadata WildSkillStatus::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[35];
+  return file_level_metadata[36];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -15886,7 +16210,7 @@ void WildSkillWeaponCostModify::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* WildSkillWeaponCostModify::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[36].descriptor;
+  return file_level_metadata[37].descriptor;
 }
 
 const WildSkillWeaponCostModify& WildSkillWeaponCostModify::default_instance() {
@@ -16064,7 +16388,7 @@ void WildSkillWeaponCostModify::InternalSwap(WildSkillWeaponCostModify* other) {
 
 ::google::protobuf::Metadata WildSkillWeaponCostModify::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[36];
+  return file_level_metadata[37];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -16166,7 +16490,7 @@ void BroadcastS2C::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* BroadcastS2C::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[37].descriptor;
+  return file_level_metadata[38].descriptor;
 }
 
 const BroadcastS2C& BroadcastS2C::default_instance() {
@@ -16577,7 +16901,7 @@ void BroadcastS2C::InternalSwap(BroadcastS2C* other) {
 
 ::google::protobuf::Metadata BroadcastS2C::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[37];
+  return file_level_metadata[38];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -16869,7 +17193,7 @@ void ReturnUserMoney::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ReturnUserMoney::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[38].descriptor;
+  return file_level_metadata[39].descriptor;
 }
 
 const ReturnUserMoney& ReturnUserMoney::default_instance() {
@@ -17162,7 +17486,7 @@ void ReturnUserMoney::InternalSwap(ReturnUserMoney* other) {
 
 ::google::protobuf::Metadata ReturnUserMoney::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[38];
+  return file_level_metadata[39];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -17324,7 +17648,7 @@ void HallGsAdditionalGameData1Rsp::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* HallGsAdditionalGameData1Rsp::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[39].descriptor;
+  return file_level_metadata[40].descriptor;
 }
 
 const HallGsAdditionalGameData1Rsp& HallGsAdditionalGameData1Rsp::default_instance() {
@@ -17684,7 +18008,7 @@ void HallGsAdditionalGameData1Rsp::InternalSwap(HallGsAdditionalGameData1Rsp* ot
 
 ::google::protobuf::Metadata HallGsAdditionalGameData1Rsp::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[39];
+  return file_level_metadata[40];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -17898,7 +18222,7 @@ void AdditionalGameDataRsp::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* AdditionalGameDataRsp::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[40].descriptor;
+  return file_level_metadata[41].descriptor;
 }
 
 const AdditionalGameDataRsp& AdditionalGameDataRsp::default_instance() {
@@ -18227,7 +18551,7 @@ void AdditionalGameDataRsp::InternalSwap(AdditionalGameDataRsp* other) {
 
 ::google::protobuf::Metadata AdditionalGameDataRsp::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[40];
+  return file_level_metadata[41];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -18410,7 +18734,7 @@ void RefreshUserFishExp::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* RefreshUserFishExp::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[41].descriptor;
+  return file_level_metadata[42].descriptor;
 }
 
 const RefreshUserFishExp& RefreshUserFishExp::default_instance() {
@@ -18682,7 +19006,7 @@ void RefreshUserFishExp::InternalSwap(RefreshUserFishExp* other) {
 
 ::google::protobuf::Metadata RefreshUserFishExp::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[41];
+  return file_level_metadata[42];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -18821,7 +19145,7 @@ void ArenaInfo::SetCachedSize(int size) const {
 }
 const ::google::protobuf::Descriptor* ArenaInfo::descriptor() {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[42].descriptor;
+  return file_level_metadata[43].descriptor;
 }
 
 const ArenaInfo& ArenaInfo::default_instance() {
@@ -19254,7 +19578,7 @@ void ArenaInfo::InternalSwap(ArenaInfo* other) {
 
 ::google::protobuf::Metadata ArenaInfo::GetMetadata() const {
   protobuf_AssignDescriptorsOnce();
-  return file_level_metadata[42];
+  return file_level_metadata[43];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS

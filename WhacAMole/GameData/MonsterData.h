@@ -1,6 +1,7 @@
 #pragma once
 
 #include <time.h>
+#include "GameData\GameConfig.h"
 
 enum emLiveStatus {
 	emLS_Death = -1,
@@ -30,7 +31,7 @@ typedef struct _monster_info_s {
 
 	// 从配置中读取的属性，基本不变
 	char				m_Name[64];					// 怪物名称
-	int					m_nType;					// 怪物类型
+	MonsterType			m_emType;					// 怪物类型
 	int					m_nHPMax;					// 怪物的最大hp
 	int					m_nHPCur;					// 怪物的当前hp
 	int					m_nRateMin;					// 怪物的最低倍数
@@ -41,11 +42,12 @@ typedef struct _monster_info_s {
 	bool				m_bIsDispear;				// 怪物是否已经消失(服务器已经处理掉了)
 	bool				m_bHasIncoming;				// 怪物是否有收益
 	bool				m_bMissHit;					// 怪物是否发生免伤
+	bool				m_bHasPay;					// 客户端是否扣费
 	emKillType			m_emKillType;				// 被击杀方式
 	int					m_nKillRate;				// 怪物被击杀时的倍数
 	long long			m_llMoney;					// 击杀怪物的金币收益
 	long long			m_llTicket;					// 击杀怪物的礼票收益
-	long long			m_llWeaponCost;				// 击杀怪物的武器消费
+	long long			m_llKillCost;				// 击杀怪物的消费(含狂暴附加费用)
 
 	_monster_info_s()
 	{

@@ -9,9 +9,8 @@ public:
 	NormalHit(MonsterManager& MM);
 	~NormalHit();
 
-public:
-	virtual int Protocal(pro_hit_t& ph, DataHit& dh);
-	virtual int Calculate(pro_hit_t& ph, DataHit& dh);
-	virtual int Statistic(pro_hit_t& ph, DataHit& dh);
-	virtual int Reward(pro_hit_t& ph, DataHit& dh);
+protected:
+	virtual int vir_Protocal(pro_hit_t& ph, DataHit& dh);
+	virtual int vir_Calculate(pro_hit_t& ph, DataHit& dh);
+	virtual int vir_Statistic(pro_hit_t& ph, DataHit& dh);
 };

@@ -92,7 +92,7 @@ int Pool<T>::Create(void* in_pData, T*& pObj)
 
 	if (m_list_free.empty())
 	{
-		if (m_map_used.size() >= m_nMax)
+		if ((int)m_map_used.size() >= m_nMax)
 			return BUILD_ERRORCODE(0, emME_OBJ_USEDOUT);
 		
 		int step = (int)(m_nMax - m_map_used.size());
@@ -155,7 +155,7 @@ bool Pool<T>::Recycle(int nID)
 	vir_Recyle(pObj);
 
 	// 说明有动态缩容
-	if (m_map_used.size() + m_list_free.size() > m_nMax)
+	if ((int)(m_map_used.size() + m_list_free.size()) > m_nMax)
 	{
 		if (nullptr != pObj)	// 删除对象
 		{
@@ -186,7 +186,7 @@ bool Pool<T>::_IsPoolFull(void)
 	if (!m_list_free.empty())
 		return false;
 
-	if (m_map_used.size() < m_nMax)
+	if ((int)m_map_used.size() < m_nMax)
 		return false;
 
 	return true;

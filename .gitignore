@@ -1,5 +1,7 @@
 /x64/
 /WhacAMole/x64/
+/WhacAMole/Debug
+/WhacAMole/Release
 /bin/
 /Debug
 /Release

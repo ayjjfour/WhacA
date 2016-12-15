@@ -24,7 +24,7 @@ int TaskPlayerHit::Initialize(void)
 
 int TaskPlayerHit::TaskBegin(/*IGamePlayer *player,*/ void* data, int nSize)
 {
-	int								res;
+	int								res = emME_OK;
 	pro_hit_t						ph;
 	DataHit							dh;
 	map<int, ITask*>::iterator		it;
@@ -35,30 +35,16 @@ int TaskPlayerHit::TaskBegin(/*IGamePlayer *player,*/ void* data, int nSize)
 
 	it = m_mapITask.find(ph.Hit.hittype());
 	if (m_mapITask.end() == it)
-		return 0;
+		return emME_OK;
 
-	do 
-	{
-		ITask*		Ip = (*it).second;
-		if (nullptr == Ip)
-			break;
+	ITask*		Ip = (*it).second;
+	if (nullptr == Ip)
+		return emME_OK;
 
-		res = Ip->Protocal(ph, dh);
-		if (emME_OK != res)
-			break;
-
-		res = Ip->Calculate(ph, dh);
-		if (emME_OK != res)
-			break;
-
-		res = Ip->Statistic(ph, dh);
-		if (emME_OK != res)
-			break;
-
-		res = Ip->Reward(ph, dh);
-		if (emME_OK != res)
-			break;
-	} while (0);
+	Ip->Protocal(ph, dh);
+	Ip->Calculate(ph, dh);
+	Ip->Statistic(ph, dh);
+	Ip->Reward(ph, dh);
 
 	return res;
 }

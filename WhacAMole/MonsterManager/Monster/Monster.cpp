@@ -96,14 +96,14 @@ Arena* Monster::RemoveArena(void)
 }
 
 // 计算收益
-bool Monster::CalculateIncoming(long long nWeapon)
+bool Monster::CalculateIncoming(long long llWeapon)
 {
 	// 判断是否死亡
 	if (!IsDeath())
 		return false;
 
 	// 计算武器消耗
-	m_stInfo.m_llWeaponCost = _vir_CalculateWeaponCost(nWeapon);
+	m_stInfo.m_llKillCost = _vir_CalculateWeaponCost(llWeapon);
 
 	// 计算免伤
 	m_stInfo.m_bMissHit = _vir_CalculateMissHit();
@@ -154,7 +154,7 @@ bool Monster::_vir_CalculateHasIncoming(void)
 // 计算金币收益
 long long Monster::_vir_CalculateMoney(void)
 {
-	return m_stInfo.m_llWeaponCost * m_stInfo.m_nKillRate;
+	return m_stInfo.m_llKillCost * m_stInfo.m_nKillRate;
 }
 
 // 计算礼票收益

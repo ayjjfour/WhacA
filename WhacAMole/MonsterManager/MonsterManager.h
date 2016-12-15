@@ -56,7 +56,7 @@ protected:
 
 	bool _initialize_ArenaPool(const arena_info_t& info, ArenaPool* pArenaPool);
 	bool _initialize_MonsterPool(const monster_info_t& info, MonsterPool* pMonsterPool, ArenaPool* pArenaPool);
-	bool _FetchMonsterInfo(int nType, monster_info_t& out_info);
+	bool _FetchMonsterInfo(MonsterType emType, monster_info_t& out_info);
 
 //////////////////////////////////////////////////////////////////////////
 // Éú²ú¹ÖÎï

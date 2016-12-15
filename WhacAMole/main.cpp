@@ -30,7 +30,7 @@ int main(int argc, char*argv[])
 		for (it = lMonster.begin(); it != lMonster.end(); it++)
 		{
 			(*it)->GetInfo(stinfo);
-			printf("[%02d]type = %d, id = 0x%X, name = %s\n", ++index, stinfo.m_nType, stinfo.m_nID, stinfo.m_Name);
+			printf("[%02d]type = %d, id = 0x%X, name = %s\n", ++index, stinfo.m_emType, stinfo.m_nID, stinfo.m_Name);
 			man.RecycleMonster(stinfo.m_nID);
 		}
 

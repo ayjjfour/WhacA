@@ -96,6 +96,9 @@ extern KingCriticalHitDefaultTypeInternal _KingCriticalHit_default_instance_;
 class KingEx;
 class KingExDefaultTypeInternal;
 extern KingExDefaultTypeInternal _KingEx_default_instance_;
+class MonsterEx;
+class MonsterExDefaultTypeInternal;
+extern MonsterExDefaultTypeInternal _MonsterEx_default_instance_;
 class MonsterIncoming;
 class MonsterIncomingDefaultTypeInternal;
 extern MonsterIncomingDefaultTypeInternal _MonsterIncoming_default_instance_;
@@ -2885,6 +2888,117 @@ class PlayerHit : public ::google::protobuf::Message /* @@protoc_insertion_point
 };
 // -------------------------------------------------------------------
 
+class MonsterEx : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SY.MonsterEx) */ {
+ public:
+  MonsterEx();
+  virtual ~MonsterEx();
+
+  MonsterEx(const MonsterEx& from);
+
+  inline MonsterEx& operator=(const MonsterEx& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  inline const ::google::protobuf::UnknownFieldSet& unknown_fields() const {
+    return _internal_metadata_.unknown_fields();
+  }
+
+  inline ::google::protobuf::UnknownFieldSet* mutable_unknown_fields() {
+    return _internal_metadata_.mutable_unknown_fields();
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const MonsterEx& default_instance();
+
+  static inline const MonsterEx* internal_default_instance() {
+    return reinterpret_cast<const MonsterEx*>(
+               &_MonsterEx_default_instance_);
+  }
+
+  void Swap(MonsterEx* other);
+
+  // implements Message ----------------------------------------------
+
+  inline MonsterEx* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  MonsterEx* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const MonsterEx& from);
+  void MergeFrom(const MonsterEx& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* SerializeWithCachedSizesToArray(::google::protobuf::uint8* output)
+      const PROTOBUF_FINAL {
+    return InternalSerializeWithCachedSizesToArray(false, output);
+  }
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(MonsterEx* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // required int32 MonsterID = 1;
+  bool has_monsterid() const;
+  void clear_monsterid();
+  static const int kMonsterIDFieldNumber = 1;
+  ::google::protobuf::int32 monsterid() const;
+  void set_monsterid(::google::protobuf::int32 value);
+
+  // required bool HasPay = 2;
+  bool has_haspay() const;
+  void clear_haspay();
+  static const int kHasPayFieldNumber = 2;
+  bool haspay() const;
+  void set_haspay(bool value);
+
+  // @@protoc_insertion_point(class_scope:SY.MonsterEx)
+ private:
+  void set_has_monsterid();
+  void clear_has_monsterid();
+  void set_has_haspay();
+  void clear_has_haspay();
+
+  // helper for ByteSizeLong()
+  size_t RequiredFieldsByteSizeFallback() const;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::HasBits<1> _has_bits_;
+  mutable int _cached_size_;
+  ::google::protobuf::int32 monsterid_;
+  bool haspay_;
+  friend void  protobuf_InitDefaults_GameMessage_2eproto_impl();
+  friend void  protobuf_AddDesc_GameMessage_2eproto_impl();
+  friend const ::google::protobuf::uint32* protobuf_Offsets_GameMessage_2eproto();
+  friend void protobuf_ShutdownFile_GameMessage_2eproto();
+
+};
+// -------------------------------------------------------------------
+
 class NormalEx : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:SY.NormalEx) */ {
  public:
   NormalEx();
@@ -2959,32 +3073,24 @@ class NormalEx : public ::google::protobuf::Message /* @@protoc_insertion_point(
 
   // accessors -------------------------------------------------------
 
-  // required int32 MonsterID = 1;
-  bool has_monsterid() const;
-  void clear_monsterid();
-  static const int kMonsterIDFieldNumber = 1;
-  ::google::protobuf::int32 monsterid() const;
-  void set_monsterid(::google::protobuf::int32 value);
-
-  // optional bool HasPay = 2;
-  bool has_haspay() const;
-  void clear_haspay();
-  static const int kHasPayFieldNumber = 2;
-  bool haspay() const;
-  void set_haspay(bool value);
+  // required .SY.MonsterEx monster = 1;
+  bool has_monster() const;
+  void clear_monster();
+  static const int kMonsterFieldNumber = 1;
+  const ::SY::MonsterEx& monster() const;
+  ::SY::MonsterEx* mutable_monster();
+  ::SY::MonsterEx* release_monster();
+  void set_allocated_monster(::SY::MonsterEx* monster);
 
   // @@protoc_insertion_point(class_scope:SY.NormalEx)
  private:
-  void set_has_monsterid();
-  void clear_has_monsterid();
-  void set_has_haspay();
-  void clear_has_haspay();
+  void set_has_monster();
+  void clear_has_monster();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::int32 monsterid_;
-  bool haspay_;
+  ::SY::MonsterEx* monster_;
   friend void  protobuf_InitDefaults_GameMessage_2eproto_impl();
   friend void  protobuf_AddDesc_GameMessage_2eproto_impl();
   friend const ::google::protobuf::uint32* protobuf_Offsets_GameMessage_2eproto();
@@ -3074,16 +3180,16 @@ class SkillList : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::int32 skillid() const;
   void set_skillid(::google::protobuf::int32 value);
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   int monster_list_size() const;
   void clear_monster_list();
   static const int kMonsterListFieldNumber = 2;
-  const ::SY::NormalEx& monster_list(int index) const;
-  ::SY::NormalEx* mutable_monster_list(int index);
-  ::SY::NormalEx* add_monster_list();
-  ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+  const ::SY::MonsterEx& monster_list(int index) const;
+  ::SY::MonsterEx* mutable_monster_list(int index);
+  ::SY::MonsterEx* add_monster_list();
+  ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
       mutable_monster_list();
-  const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+  const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
       monster_list() const;
 
   // @@protoc_insertion_point(class_scope:SY.SkillList)
@@ -3094,7 +3200,7 @@ class SkillList : public ::google::protobuf::Message /* @@protoc_insertion_point
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::RepeatedPtrField< ::SY::NormalEx > monster_list_;
+  ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx > monster_list_;
   ::google::protobuf::int32 skillid_;
   friend void  protobuf_InitDefaults_GameMessage_2eproto_impl();
   friend void  protobuf_AddDesc_GameMessage_2eproto_impl();
@@ -3279,25 +3385,25 @@ class KingEx : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
 
   // accessors -------------------------------------------------------
 
-  // required .SY.NormalEx king = 1;
+  // required .SY.MonsterEx king = 1;
   bool has_king() const;
   void clear_king();
   static const int kKingFieldNumber = 1;
-  const ::SY::NormalEx& king() const;
-  ::SY::NormalEx* mutable_king();
-  ::SY::NormalEx* release_king();
-  void set_allocated_king(::SY::NormalEx* king);
+  const ::SY::MonsterEx& king() const;
+  ::SY::MonsterEx* mutable_king();
+  ::SY::MonsterEx* release_king();
+  void set_allocated_king(::SY::MonsterEx* king);
 
-  // repeated .SY.NormalEx monster_list = 2;
+  // repeated .SY.MonsterEx monster_list = 2;
   int monster_list_size() const;
   void clear_monster_list();
   static const int kMonsterListFieldNumber = 2;
-  const ::SY::NormalEx& monster_list(int index) const;
-  ::SY::NormalEx* mutable_monster_list(int index);
-  ::SY::NormalEx* add_monster_list();
-  ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+  const ::SY::MonsterEx& monster_list(int index) const;
+  ::SY::MonsterEx* mutable_monster_list(int index);
+  ::SY::MonsterEx* add_monster_list();
+  ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
       mutable_monster_list();
-  const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+  const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
       monster_list() const;
 
   // @@protoc_insertion_point(class_scope:SY.KingEx)
@@ -3308,8 +3414,8 @@ class KingEx : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
-  ::google::protobuf::RepeatedPtrField< ::SY::NormalEx > monster_list_;
-  ::SY::NormalEx* king_;
+  ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx > monster_list_;
+  ::SY::MonsterEx* king_;
   friend void  protobuf_InitDefaults_GameMessage_2eproto_impl();
   friend void  protobuf_AddDesc_GameMessage_2eproto_impl();
   friend const ::google::protobuf::uint32* protobuf_Offsets_GameMessage_2eproto();
@@ -7496,54 +7602,103 @@ PlayerHit::mutable_skillhitlisthaspay() {
 
 // -------------------------------------------------------------------
 
-// NormalEx
+// MonsterEx
 
 // required int32 MonsterID = 1;
-inline bool NormalEx::has_monsterid() const {
+inline bool MonsterEx::has_monsterid() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
-inline void NormalEx::set_has_monsterid() {
+inline void MonsterEx::set_has_monsterid() {
   _has_bits_[0] |= 0x00000001u;
 }
-inline void NormalEx::clear_has_monsterid() {
+inline void MonsterEx::clear_has_monsterid() {
   _has_bits_[0] &= ~0x00000001u;
 }
-inline void NormalEx::clear_monsterid() {
+inline void MonsterEx::clear_monsterid() {
   monsterid_ = 0;
   clear_has_monsterid();
 }
-inline ::google::protobuf::int32 NormalEx::monsterid() const {
-  // @@protoc_insertion_point(field_get:SY.NormalEx.MonsterID)
+inline ::google::protobuf::int32 MonsterEx::monsterid() const {
+  // @@protoc_insertion_point(field_get:SY.MonsterEx.MonsterID)
   return monsterid_;
 }
-inline void NormalEx::set_monsterid(::google::protobuf::int32 value) {
+inline void MonsterEx::set_monsterid(::google::protobuf::int32 value) {
   set_has_monsterid();
   monsterid_ = value;
-  // @@protoc_insertion_point(field_set:SY.NormalEx.MonsterID)
+  // @@protoc_insertion_point(field_set:SY.MonsterEx.MonsterID)
 }
 
-// optional bool HasPay = 2;
-inline bool NormalEx::has_haspay() const {
+// required bool HasPay = 2;
+inline bool MonsterEx::has_haspay() const {
   return (_has_bits_[0] & 0x00000002u) != 0;
 }
-inline void NormalEx::set_has_haspay() {
+inline void MonsterEx::set_has_haspay() {
   _has_bits_[0] |= 0x00000002u;
 }
-inline void NormalEx::clear_has_haspay() {
+inline void MonsterEx::clear_has_haspay() {
   _has_bits_[0] &= ~0x00000002u;
 }
-inline void NormalEx::clear_haspay() {
+inline void MonsterEx::clear_haspay() {
   haspay_ = false;
   clear_has_haspay();
 }
-inline bool NormalEx::haspay() const {
-  // @@protoc_insertion_point(field_get:SY.NormalEx.HasPay)
+inline bool MonsterEx::haspay() const {
+  // @@protoc_insertion_point(field_get:SY.MonsterEx.HasPay)
   return haspay_;
 }
-inline void NormalEx::set_haspay(bool value) {
+inline void MonsterEx::set_haspay(bool value) {
   set_has_haspay();
   haspay_ = value;
-  // @@protoc_insertion_point(field_set:SY.NormalEx.HasPay)
+  // @@protoc_insertion_point(field_set:SY.MonsterEx.HasPay)
+}
+
+// -------------------------------------------------------------------
+
+// NormalEx
+
+// required .SY.MonsterEx monster = 1;
+inline bool NormalEx::has_monster() const {
+  return (_has_bits_[0] & 0x00000001u) != 0;
+}
+inline void NormalEx::set_has_monster() {
+  _has_bits_[0] |= 0x00000001u;
+}
+inline void NormalEx::clear_has_monster() {
+  _has_bits_[0] &= ~0x00000001u;
+}
+inline void NormalEx::clear_monster() {
+  if (monster_ != NULL) monster_->::SY::MonsterEx::Clear();
+  clear_has_monster();
+}
+inline const ::SY::MonsterEx& NormalEx::monster() const {
+  // @@protoc_insertion_point(field_get:SY.NormalEx.monster)
+  return monster_ != NULL ? *monster_
+                         : *::SY::MonsterEx::internal_default_instance();
+}
+inline ::SY::MonsterEx* NormalEx::mutable_monster() {
+  set_has_monster();
+  if (monster_ == NULL) {
+    monster_ = new ::SY::MonsterEx;
+  }
+  // @@protoc_insertion_point(field_mutable:SY.NormalEx.monster)
+  return monster_;
+}
+inline ::SY::MonsterEx* NormalEx::release_monster() {
+  // @@protoc_insertion_point(field_release:SY.NormalEx.monster)
+  clear_has_monster();
+  ::SY::MonsterEx* temp = monster_;
+  monster_ = NULL;
+  return temp;
+}
+inline void NormalEx::set_allocated_monster(::SY::MonsterEx* monster) {
+  delete monster_;
+  monster_ = monster;
+  if (monster) {
+    set_has_monster();
+  } else {
+    clear_has_monster();
+  }
+  // @@protoc_insertion_point(field_set_allocated:SY.NormalEx.monster)
 }
 
 // -------------------------------------------------------------------
@@ -7574,31 +7729,31 @@ inline void SkillList::set_skillid(::google::protobuf::int32 value) {
   // @@protoc_insertion_point(field_set:SY.SkillList.skillID)
 }
 
-// repeated .SY.NormalEx monster_list = 2;
+// repeated .SY.MonsterEx monster_list = 2;
 inline int SkillList::monster_list_size() const {
   return monster_list_.size();
 }
 inline void SkillList::clear_monster_list() {
   monster_list_.Clear();
 }
-inline const ::SY::NormalEx& SkillList::monster_list(int index) const {
+inline const ::SY::MonsterEx& SkillList::monster_list(int index) const {
   // @@protoc_insertion_point(field_get:SY.SkillList.monster_list)
   return monster_list_.Get(index);
 }
-inline ::SY::NormalEx* SkillList::mutable_monster_list(int index) {
+inline ::SY::MonsterEx* SkillList::mutable_monster_list(int index) {
   // @@protoc_insertion_point(field_mutable:SY.SkillList.monster_list)
   return monster_list_.Mutable(index);
 }
-inline ::SY::NormalEx* SkillList::add_monster_list() {
+inline ::SY::MonsterEx* SkillList::add_monster_list() {
   // @@protoc_insertion_point(field_add:SY.SkillList.monster_list)
   return monster_list_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+inline ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
 SkillList::mutable_monster_list() {
   // @@protoc_insertion_point(field_mutable_list:SY.SkillList.monster_list)
   return &monster_list_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+inline const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
 SkillList::monster_list() const {
   // @@protoc_insertion_point(field_list:SY.SkillList.monster_list)
   return monster_list_;
@@ -7642,7 +7797,7 @@ SkillEx::skill_list() const {
 
 // KingEx
 
-// required .SY.NormalEx king = 1;
+// required .SY.MonsterEx king = 1;
 inline bool KingEx::has_king() const {
   return (_has_bits_[0] & 0x00000001u) != 0;
 }
@@ -7653,30 +7808,30 @@ inline void KingEx::clear_has_king() {
   _has_bits_[0] &= ~0x00000001u;
 }
 inline void KingEx::clear_king() {
-  if (king_ != NULL) king_->::SY::NormalEx::Clear();
+  if (king_ != NULL) king_->::SY::MonsterEx::Clear();
   clear_has_king();
 }
-inline const ::SY::NormalEx& KingEx::king() const {
+inline const ::SY::MonsterEx& KingEx::king() const {
   // @@protoc_insertion_point(field_get:SY.KingEx.king)
   return king_ != NULL ? *king_
-                         : *::SY::NormalEx::internal_default_instance();
+                         : *::SY::MonsterEx::internal_default_instance();
 }
-inline ::SY::NormalEx* KingEx::mutable_king() {
+inline ::SY::MonsterEx* KingEx::mutable_king() {
   set_has_king();
   if (king_ == NULL) {
-    king_ = new ::SY::NormalEx;
+    king_ = new ::SY::MonsterEx;
   }
   // @@protoc_insertion_point(field_mutable:SY.KingEx.king)
   return king_;
 }
-inline ::SY::NormalEx* KingEx::release_king() {
+inline ::SY::MonsterEx* KingEx::release_king() {
   // @@protoc_insertion_point(field_release:SY.KingEx.king)
   clear_has_king();
-  ::SY::NormalEx* temp = king_;
+  ::SY::MonsterEx* temp = king_;
   king_ = NULL;
   return temp;
 }
-inline void KingEx::set_allocated_king(::SY::NormalEx* king) {
+inline void KingEx::set_allocated_king(::SY::MonsterEx* king) {
   delete king_;
   king_ = king;
   if (king) {
@@ -7687,31 +7842,31 @@ inline void KingEx::set_allocated_king(::SY::NormalEx* king) {
   // @@protoc_insertion_point(field_set_allocated:SY.KingEx.king)
 }
 
-// repeated .SY.NormalEx monster_list = 2;
+// repeated .SY.MonsterEx monster_list = 2;
 inline int KingEx::monster_list_size() const {
   return monster_list_.size();
 }
 inline void KingEx::clear_monster_list() {
   monster_list_.Clear();
 }
-inline const ::SY::NormalEx& KingEx::monster_list(int index) const {
+inline const ::SY::MonsterEx& KingEx::monster_list(int index) const {
   // @@protoc_insertion_point(field_get:SY.KingEx.monster_list)
   return monster_list_.Get(index);
 }
-inline ::SY::NormalEx* KingEx::mutable_monster_list(int index) {
+inline ::SY::MonsterEx* KingEx::mutable_monster_list(int index) {
   // @@protoc_insertion_point(field_mutable:SY.KingEx.monster_list)
   return monster_list_.Mutable(index);
 }
-inline ::SY::NormalEx* KingEx::add_monster_list() {
+inline ::SY::MonsterEx* KingEx::add_monster_list() {
   // @@protoc_insertion_point(field_add:SY.KingEx.monster_list)
   return monster_list_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >*
+inline ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >*
 KingEx::mutable_monster_list() {
   // @@protoc_insertion_point(field_mutable_list:SY.KingEx.monster_list)
   return &monster_list_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::SY::NormalEx >&
+inline const ::google::protobuf::RepeatedPtrField< ::SY::MonsterEx >&
 KingEx::monster_list() const {
   // @@protoc_insertion_point(field_list:SY.KingEx.monster_list)
   return monster_list_;
@@ -9800,6 +9955,8 @@ inline void ArenaInfo::set_allocated_name(::std::string* name) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

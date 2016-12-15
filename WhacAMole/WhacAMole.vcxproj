@@ -74,7 +74,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./;E:\code\tool\protobuf\src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>libprotobufD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\code\tool\install\lib</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -86,6 +92,10 @@
     <PreBuildEvent>
       <Command>./Protocal/Compile.cmd</Command>
     </PreBuildEvent>
+    <Link>
+      <AdditionalLibraryDirectories>E:\code\tool\install\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libprotobuf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -167,6 +177,7 @@
     <ClCompile Include="MonsterManager\Pool\Monster\MonsterPool.cpp" />
     <ClCompile Include="MonsterManager\Pool\Monster\MTracerPool.cpp" />
     <ClCompile Include="Protocal\GameMessage.pb.cc" />
+    <ClCompile Include="TaskManager\PlayerHit\ITaskInterface.cpp" />
     <ClCompile Include="TaskManager\PlayerHit\KingHit\KingHit.cpp" />
     <ClCompile Include="TaskManager\PlayerHit\NormalHit\NormalHit.cpp" />
     <ClCompile Include="TaskManager\PlayerHit\SkillHit\SkillHit.cpp" />

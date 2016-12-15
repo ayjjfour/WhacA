@@ -63,7 +63,7 @@ void MonsterPool::vir_SetMonsterInfo(monster_info_t& out_info, void* in_pData)
 
 int MonsterPool::vir_CreateID()
 {
-	int	nID = BUILD_MONSTERID(m_stInfo.m_nType, m_nIDs);
+	int	nID = BUILD_MONSTERID(m_stInfo.m_emType, m_nIDs);
 	m_nIDs++;
 
 	if (m_nIDs >= g_c_nMaxMonsterID)

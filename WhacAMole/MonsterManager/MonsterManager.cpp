@@ -143,11 +143,11 @@ bool MonsterManager::_initialize_MonsterPool(void)
 	return res;
 }
 
-bool MonsterManager::_FetchMonsterInfo(int nType, monster_info_t& out_info)
+bool MonsterManager::_FetchMonsterInfo(MonsterType emType, monster_info_t& out_info)
 {
 	//-- 从配置中取指定类型的怪物数据
-	out_info.m_nType = nType;
-	_snprintf_s(out_info.m_Name, sizeof(out_info.m_Name) - 1, "怪物%d", nType);
+	out_info.m_emType = emType;
+	_snprintf_s(out_info.m_Name, sizeof(out_info.m_Name) - 1, "怪物%d", emType);
 	out_info.m_nHPMax = 2;
 	out_info.m_nHPCur = out_info.m_nHPMax;
 	out_info.m_nRateMin = 1;
